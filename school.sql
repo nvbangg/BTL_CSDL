@@ -151,36 +151,3 @@ CREATE TABLE CoSoVatChat (
     TinhTrang VARCHAR(50),
     FOREIGN KEY (TenPhong) REFERENCES Phong(TenPhong) ON UPDATE CASCADE ON DELETE CASCADE
 );
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
