@@ -114,6 +114,7 @@ CREATE TABLE LanAn (
 CREATE TABLE LanAnMonAn (
 	NgayAn DATE,
     MonAn VARCHAR(50),
+    PRIMARY KEY (NgayAn, MonAn),
     FOREIGN KEY (NgayAn) REFERENCES LanAn(NgayAn)  ON UPDATE CASCADE ON DELETE CASCADE
 );
 
@@ -155,12 +156,12 @@ CREATE TABLE QuanLy(
 );
 
 CREATE TABLE CoSoVatChat (
-    MaVatTu VARCHAR(20),
     TenPhong VARCHAR(10),
     TenVatTu VARCHAR(100),
     SoLuong INT,
     NgayTrangBi DATE,
     TinhTrang VARCHAR(50),
+    PRIMARY KEY(TenPhong, TenVatTu),
     FOREIGN KEY (TenPhong) REFERENCES Phong(TenPhong) ON UPDATE CASCADE ON DELETE CASCADE
 );
 	
