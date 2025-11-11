@@ -1,0 +1,171 @@
+CREATE TABLE NhanSu (
+    MaNS VARCHAR(20) PRIMARY KEY,
+    HoTen VARCHAR(100) NOT NULL,
+    NgaySinh DATE,
+    GioiTinh VARCHAR(10),
+    DiaChi VARCHAR(255),
+    Email VARCHAR(100),
+    TrangThaiLamViec VARCHAR(50),
+    CCCD VARCHAR(12),
+    NgayVaoLam DATE,
+    MaHT VARCHAR(20),
+    MaHP VARCHAR(20),
+    FOREIGN KEY (MaHT) REFERENCES NhanSu(MaNS),
+    FOREIGN KEY (MaHP) REFERENCES NhanSu(MaNS)
+);
+
+CREATE TABLE BangLuong (
+    MaNS VARCHAR(20),
+    NgayNhanLuong DATE,
+    LuongCoBan DECIMAL(18, 2),
+    Thuong DECIMAL(18, 2),
+    PhuCap DECIMAL(18, 2),
+    KhauTru DECIMAL(18, 2),
+    PRIMARY KEY(MaNS, NgayNhanLuong),
+    FOREIGN KEY (MaNS) REFERENCES NhanSu(MaNS) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE NhanSuSDT (
+	 MaNS VARCHAR(20),
+     SDT VARCHAR(20),
+     PRIMARY KEY (MaNS, SDT),
+     FOREIGN KEY (MaNS) REFERENCES nhansu (MaNS)
+);
+
+CREATE TABLE CanBoNhanVien (
+    MaNS VARCHAR(20) PRIMARY KEY,
+    ViTriCongViec VARCHAR(100),
+    FOREIGN KEY (MaNS) REFERENCES NhanSu(MaNS)  ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE ViTriMoTa (
+    ViTriCongViec VARCHAR(50),
+    MoTaCongViec VARCHAR(100),
+    PRIMARY KEY (ViTriCongViec),
+    FOREIGN KEY (ViTriCongViec) REFERENCES CanBoNhanVien(MaNS)
+);
+
+CREATE TABLE GiaoVien (
+    MaNS VARCHAR(20) PRIMARY KEY,
+    TrinhDoChuyenMon VARCHAR(100),
+    PhongBan VARCHAR(100),
+    ThamNienNghe INT,
+    FOREIGN KEY (MaNS) REFERENCES NhanSu(MaNS) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE NamHoc (
+    TenNamHoc VARCHAR(20) PRIMARY KEY,
+    NgayBatDau DATE,
+    NgayKetThuc DATE
+);
+
+CREATE TABLE KhoanPhiTrongNam (
+    TenNamHoc VARCHAR(20),
+    TenKhoanPhi VARCHAR(100),
+    SoTienPhaiDong BIGINT,
+    PRIMARY KEY (TenNamHoc, TenKhoanPhi),
+    FOREIGN KEY (TenNamHoc) REFERENCES NamHoc(TenNamHoc)  ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE LopHoc (
+	TenNamHoc VARCHAR(20),
+    TenLop VARCHAR(10),
+    MaNS VARCHAR(20),
+    SiSo INT,
+    PhongHocChinh VARCHAR(10),
+    PRIMARY KEY (TenNamHoc, TenLop),
+    FOREIGN KEY (MaNS) REFERENCES GiaoVien(MaNS),
+    FOREIGN KEY (TenNamHoc) REFERENCES NamHoc(TenNamHoc)
+);
+
+CREATE TABLE HocSinh (
+    MaHS VARCHAR(20),
+    TenNamHoc VARCHAR(20),
+    TenLop VARCHAR(10),
+    HoDem VARCHAR(50),
+    TenRieng VARCHAR(50),
+    NgaySinh DATE,
+    GioiTinh VARCHAR(10),
+    DiaChi VARCHAR(255),
+    HoTenPhuHuynh VARCHAR(100),
+    SDTPhuHuynh VARCHAR(15),
+    TrangThaiHocTap VARCHAR(50),
+    PRIMARY KEY(TenNamHoc, TenLop, MaHS),
+    FOREIGN KEY (TenNamHoc, TenLop) REFERENCES LopHoc(TenNamHoc, TenLop) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE LanDongPhi (
+    MaGiaoDich VARCHAR(20) PRIMARY KEY, 
+    ThoiGianDong DATE,
+    SoTienDaDong BIGINT,
+    ConNo BIGINT,
+    TenKhoanPhi VARCHAR(100),
+    TenNamHoc VARCHAR(20),
+    TenLop VARCHAR(10),
+    MaHS VARCHAR(20),
+    FOREIGN KEY (TenNamHoc, TenLop, MaHS) REFERENCES HocSinh(TenNamHoc, TenLop, MaHS) ON UPDATE CASCADE ON DELETE SET NULL,
+    FOREIGN KEY (TenNamHoc, TenKhoanPhi) REFERENCES KhoanPhiTrongNam(TenNamHoc, TenKhoanPhi)
+);
+
+CREATE TABLE LanAn (
+	NgayAn DATE PRIMARY KEY
+);
+
+CREATE TABLE LanAnMonAn (
+	NgayAn DATE,
+    MonAn VARCHAR(50),
+    FOREIGN KEY (NgayAn) REFERENCES LanAn(NgayAn)  ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE ThamGiaBanTru (
+    TenNamHoc VARCHAR(20),
+    TenLop VARCHAR(10),
+    MaHS VARCHAR(20),
+    NgayAn DATE,
+    PRIMARY KEY (TenNamHoc, TenLop, MaHS, NgayAn),
+    FOREIGN KEY (TenNamHoc, TenLop, MaHS) REFERENCES HocSinh(TenNamHoc, TenLop, MaHS),
+    FOREIGN KEY (NgayAn) REFERENCES LanAn(NgayAn)  ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE HuongDan (
+    MaNS VARCHAR(20),
+    TenNamHoc VARCHAR(20),
+    TenLop VARCHAR(10),
+    MaHS VARCHAR(20),
+    NgayAn DATE,
+    PRIMARY KEY (MaNS, TenNamHoc, TenLop, MaHS, NgayAn),
+    FOREIGN KEY (TenNamHoc, TenLop, MaHS, NgayAn) REFERENCES ThamGiaBanTru(TenNamHoc, TenLop, MaHS, NgayAn)
+     ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (MaNS) REFERENCES GiaoVien(MaNS) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
