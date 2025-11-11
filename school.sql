@@ -128,18 +128,6 @@ CREATE TABLE ThamGiaBanTru (
     FOREIGN KEY (NgayAn) REFERENCES LanAn(NgayAn)  ON UPDATE CASCADE ON DELETE CASCADE
 );
 
-CREATE TABLE HuongDan (
-    MaNS VARCHAR(20),
-    TenNamHoc VARCHAR(20),
-    TenLop VARCHAR(10),
-    MaHS VARCHAR(20),
-    NgayAn DATE,
-    PRIMARY KEY (MaNS, TenNamHoc, TenLop, MaHS, NgayAn),
-    FOREIGN KEY (TenNamHoc, TenLop, MaHS, NgayAn) REFERENCES ThamGiaBanTru(TenNamHoc, TenLop, MaHS, NgayAn)
-     ON UPDATE CASCADE ON DELETE CASCADE,
-    FOREIGN KEY (MaNS) REFERENCES GiaoVien(MaNS) ON UPDATE CASCADE ON DELETE CASCADE
-);
-
 CREATE TABLE Phong(
 	TenPhong VARCHAR(10),
 	SucChua INT,
@@ -164,36 +152,3 @@ CREATE TABLE CoSoVatChat (
     PRIMARY KEY(TenPhong, TenVatTu),
     FOREIGN KEY (TenPhong) REFERENCES Phong(TenPhong) ON UPDATE CASCADE ON DELETE CASCADE
 );
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
