@@ -8,28 +8,39 @@ CREATE TABLE NhanSu (
     NgaySinh DATE,
     GioiTinh VARCHAR(10),
     DiaChi VARCHAR(255),
-    Email VARCHAR(100),
+    Email VARCHAR(100) UNIQUE,
     TrangThaiLamViec VARCHAR(50),
+<<<<<<< HEAD
     CCCD VARCHAR(12),
     NgayVaoLam DATE
+=======
+    CCCD VARCHAR(12) NOT NULL UNIQUE,
+    NgayVaoLam DATE,
+    MaHT VARCHAR(20),
+    MaHP VARCHAR(20),
+    FOREIGN KEY (MaHT)
+        REFERENCES NhanSu (MaNS),
+    FOREIGN KEY (MaHP)
+        REFERENCES NhanSu (MaNS)
+>>>>>>> d9ab96c6be52f35776de8cc784167aa043f6b8ea
 );
 
 CREATE TABLE BangLuong (
     MaNS VARCHAR(20),
     NgayNhanLuong DATE,
-    LuongCoBan DECIMAL(18, 2),
-    Thuong DECIMAL(18, 2),
-    PhuCap DECIMAL(18, 2),
-    KhauTru DECIMAL(18, 2),
+    LuongCoBan DECIMAL(18, 2) CHECK (LuongCoBan >= 0),
+    Thuong DECIMAL(18, 2) CHECK (Thuong >= 0),
+    PhuCap DECIMAL(18, 2) CHECK (PhuCap >= 0),
+    KhauTru DECIMAL(18, 2) CHECK (KhauTru >= 0),
     PRIMARY KEY(MaNS, NgayNhanLuong),
     FOREIGN KEY (MaNS) REFERENCES NhanSu(MaNS) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE NhanSuSDT (
 	 MaNS VARCHAR(20),
-     SDT VARCHAR(20),
+     SDT VARCHAR(20) UNIQUE,
      PRIMARY KEY (MaNS, SDT),
-     FOREIGN KEY (MaNS) REFERENCES NhanSu (MaNS)
+    FOREIGN KEY (MaNS) REFERENCES NhanSu (MaNS) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE ViTriCV_MoTaCV (
@@ -42,7 +53,7 @@ CREATE TABLE CanBoNhanVien (
     MaNS_C VARCHAR(20) PRIMARY KEY,
     ViTriCongViec VARCHAR(100),
     FOREIGN KEY (MaNS_C) REFERENCES NhanSu(MaNS)  ON UPDATE CASCADE ON DELETE CASCADE,
-    FOREIGN KEY (ViTriCongViec) REFERENCES ViTriCV_MoTaCV(ViTriCongViec)
+    FOREIGN KEY (ViTriCongViec) REFERENCES ViTriCV_MoTaCV(ViTriCongViec) ON UPDATE CASCADE ON DELETE RESTRICT
 );
 
 CREATE TABLE GiaoVien (
@@ -56,13 +67,14 @@ CREATE TABLE GiaoVien (
 CREATE TABLE NamHoc (
     TenNamHoc VARCHAR(20) PRIMARY KEY,
     NgayBatDau DATE,
-    NgayKetThuc DATE
+    NgayKetThuc DATE,
+    CHECK (NgayBatDau < NgayKetThuc)
 );
 
 CREATE TABLE KhoanPhiTrongNam (
     TenNamHoc VARCHAR(20),
     TenKhoanPhi VARCHAR(100),
-    SoTienPhaiDong BIGINT,
+    SoTienPhaiDong BIGINT CHECK (SoTienPhaiDong >= 0),
     PRIMARY KEY (TenNamHoc, TenKhoanPhi),
     FOREIGN KEY (TenNamHoc) REFERENCES NamHoc(TenNamHoc)  ON UPDATE CASCADE ON DELETE CASCADE
 );
@@ -71,11 +83,11 @@ CREATE TABLE LopHoc (
 	TenNamHoc VARCHAR(20),
     TenLop VARCHAR(10),
     MaNS_G VARCHAR(20),
-    SiSo INT,
+    SiSo INT CHECK (SiSo >= 0),
     PhongHocChinh VARCHAR(10),
     PRIMARY KEY (TenNamHoc, TenLop),
-    FOREIGN KEY (MaNS_G) REFERENCES GiaoVien(MaNS_G),
-    FOREIGN KEY (TenNamHoc) REFERENCES NamHoc(TenNamHoc)
+    FOREIGN KEY (MaNS_G) REFERENCES GiaoVien(MaNS_G) ON UPDATE CASCADE ON DELETE SET NULL,
+    FOREIGN KEY (TenNamHoc) REFERENCES NamHoc(TenNamHoc) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE HocSinh (
@@ -97,8 +109,8 @@ CREATE TABLE HocSinh (
 CREATE TABLE LanDongPhi (
     MaGiaoDich VARCHAR(20) PRIMARY KEY, 
     ThoiGianDong DATE,
-    SoTienDaDong BIGINT,
-    ConNo BIGINT,
+    SoTienDaDong BIGINT CHECK (SoTienDaDong >= 0),
+    ConNo BIGINT CHECK (ConNo >= 0),
     TenKhoanPhi VARCHAR(100),
     TenNamHoc VARCHAR(20),
     TenLop VARCHAR(10),
@@ -125,15 +137,14 @@ CREATE TABLE ThamGiaBanTru (
     NgayAn DATE,
     MaNS_G VARCHAR(20),
     PRIMARY KEY (TenNamHoc, TenLop, MaHS, NgayAn),
-    FOREIGN KEY (TenNamHoc, TenLop, MaHS) REFERENCES HocSinh(TenNamHoc, TenLop, MaHS),
-    FOREIGN KEY (NgayAn) REFERENCES LanAn(NgayAn),
-    FOREIGN KEY (MaNS_G) REFERENCES GiaoVien(MaNS_G)
-    ON UPDATE CASCADE ON DELETE CASCADE
+    FOREIGN KEY (TenNamHoc, TenLop, MaHS) REFERENCES HocSinh(TenNamHoc, TenLop, MaHS) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (NgayAn) REFERENCES LanAn(NgayAn) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (MaNS_G) REFERENCES GiaoVien(MaNS_G) ON UPDATE CASCADE ON DELETE SET NULL
 );
 
 CREATE TABLE Phong(
 	TenPhong VARCHAR(10),
-	SucChua INT,
+	SucChua INT CHECK (SucChua >= 0),
     ChucNang VARCHAR(100),
     PRIMARY KEY (TenPhong)
    ); 
@@ -149,10 +160,10 @@ CREATE TABLE QuanLy(
 CREATE TABLE CoSoVatChat (
     TenPhong VARCHAR(10),
     TenVatTu VARCHAR(100),
-    SoLuong INT,
+    SoLuong INT CHECK (SoLuong >= 0),
     NgayTrangBi DATE,
     TinhTrang VARCHAR(50),
-    GiaTri INT,
+    GiaTri INT CHECK (GiaTri >= 0),
     FOREIGN KEY (TenPhong) REFERENCES Phong(TenPhong) ON UPDATE CASCADE ON DELETE CASCADE,
 	PRIMARY KEY (TenPhong, TenVatTu)
 );
