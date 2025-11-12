@@ -191,130 +191,49 @@ INSERT INTO KhoanPhiTrongNam (TenNamHoc, TenKhoanPhi, SoTienPhaiDong) VALUES
 ('2024-2025', 'Phí hoạt động ngoại khóa', 850000),
 ('2024-2025', 'Phí đồng phục', 550000);
 
--- Dữ liệu cho bảng HocSinh
 
--- ======================================================================
--- ****** HỌC SINH NĂM HỌC 2023-2024 ******
--- ======================================================================
 
--- Lớp LA1 (Năm sinh khoảng 2018)
 INSERT INTO HocSinh (MaHS, TenNamHoc, TenLop, HoDem, TenRieng, NgaySinh, GioiTinh, DiaChi, HoTenPhuHuynh, SDTPhuHuynh, TrangThaiHocTap) VALUES
-('HS0001', '2023-2024', 'LA1', 'Nguyễn Minh', 'An', '2018-01-15', 'Nam', '15 Lê Lợi, P. Bến Nghé, Q.1, TP.HCM', 'Nguyễn Văn Long', '0903111222', 'Đã tốt nghiệp'),
-('HS0002', '2023-2024', 'LA1', 'Trần Ngọc', 'Bảo', '2018-03-22', 'Nữ', '28 Đồng Khởi, P. Bến Nghé, Q.1, TP.HCM', 'Trần Thị Mai', '0918333444', 'Đã tốt nghiệp'),
-('HS0003', '2023-2024', 'LA1', 'Lê Anh', 'Dũng', '2018-05-10', 'Nam', '45 Hai Bà Trưng, P. Đa Kao, Q.1, TP.HCM', 'Lê Hoàng Việt', '0989555666', 'Đã tốt nghiệp'),
-('HS0004', '2023-2024', 'LA1', 'Phạm Gia', 'Hân', '2018-07-01', 'Nữ', '72 Nguyễn Đình Chiểu, P.6, Q.3, TP.HCM', 'Phạm Thị Thu Trang', '0908777888', 'Chuyển trường'),
-('HS0005', '2023-2024', 'LA1', 'Vũ Đức', 'Kiên', '2018-02-18', 'Nam', '91 Pasteur, P. Nguyễn Thái Bình, Q.1, TP.HCM', 'Vũ Minh Tuấn', '0913999000', 'Đã tốt nghiệp');
-
--- Lớp LA2 (Năm sinh khoảng 2018)
-INSERT INTO HocSinh (MaHS, TenNamHoc, TenLop, HoDem, TenRieng, NgaySinh, GioiTinh, DiaChi, HoTenPhuHuynh, SDTPhuHuynh, TrangThaiHocTap) VALUES
-('HS0006', '2023-2024', 'LA2', 'Hoàng Thị', 'Linh', '2018-04-12', 'Nữ', '112 Võ Thị Sáu, P.8, Q.3, TP.HCM', 'Hoàng Văn Nam', '0903121314', 'Đã tốt nghiệp'),
-('HS0007', '2023-2024', 'LA2', 'Đặng Bảo', 'Minh', '2018-06-05', 'Nam', '220 Điện Biên Phủ, P.22, Q.Bình Thạnh, TP.HCM', 'Đặng Thu Hà', '0988151617', 'Đã tốt nghiệp'),
-('HS0008', '2023-2024', 'LA2', 'Bùi Khánh', 'Ngọc', '2018-08-30', 'Nữ', '33 Trần Quốc Thảo, P.7, Q.3, TP.HCM', 'Bùi Anh Khoa', '0918181920', 'Đã tốt nghiệp'),
-('HS0009', '2023-2024', 'LA2', 'Ngô Gia', 'Phúc', '2018-09-02', 'Nam', '56 Nam Kỳ Khởi Nghĩa, P.8, Q.3, TP.HCM', 'Ngô Thị Lan Anh', '0909212223', 'Đã tốt nghiệp'),
-('HS0010', '2023-2024', 'LA2', 'Đỗ Thùy', 'Quỳnh', '2018-10-11', 'Nữ', '77 Lý Chính Thắng, P.8, Q.3, TP.HCM', 'Đỗ Minh Quân', '0979242526', 'Đã tốt nghiệp');
-
--- Lớp CHOI1 (Năm sinh khoảng 2019)
-INSERT INTO HocSinh (MaHS, TenNamHoc, TenLop, HoDem, TenRieng, NgaySinh, GioiTinh, DiaChi, HoTenPhuHuynh, SDTPhuHuynh, TrangThaiHocTap) VALUES
-('HS0011', '2023-2024', 'CHOI1', 'Phan Tuấn', 'Sơn', '2019-01-25', 'Nam', '101 Cách Mạng Tháng Tám, P.15, Q.10, TP.HCM', 'Phan Văn Hùng', '0908272829', 'Đang học'),
-('HS0012', '2023-2024', 'CHOI1', 'Võ Ngọc', 'Thảo', '2019-03-17', 'Nữ', '205 Sư Vạn Hạnh, P.12, Q.10, TP.HCM', 'Võ Thị Kim Chi', '0913303132', 'Đang học'),
-('HS0013', '2023-2024', 'CHOI1', 'Lý Minh', 'Thành', '2019-05-28', 'Nam', '310 Ba Tháng Hai, P.12, Q.10, TP.HCM', 'Lý Hùng', '0987333435', 'Đang học'),
-('HS0014', '2023-2024', 'CHOI1', 'Trần Thảo', 'Uyên', '2019-07-14', 'Nữ', '450 Nguyễn Tri Phương, P.9, Q.10, TP.HCM', 'Trần Minh Tâm', '0909363738', 'Đang học'),
-('HS0015', '2023-2024', 'CHOI1', 'Nguyễn Hoàng', 'Vũ', '2019-09-09', 'Nam', '580 Ngô Gia Tự, P.9, Q.10, TP.HCM', 'Nguyễn Thị Bích Thủy', '0918394041', 'Đang học');
-
--- Lớp MAM1 (Năm sinh khoảng 2020)
-INSERT INTO HocSinh (MaHS, TenNamHoc, TenLop, HoDem, TenRieng, NgaySinh, GioiTinh, DiaChi, HoTenPhuHuynh, SDTPhuHuynh, TrangThaiHocTap) VALUES
-('HS0016', '2023-2024', 'MAM1', 'Lê Bảo', 'An', '2020-02-02', 'Nữ', '15 Nguyễn Trãi, P.2, Q.5, TP.HCM', 'Lê Văn Tám', '0903424344', 'Đang học'),
-('HS0017', '2023-2024', 'MAM1', 'Phạm Minh', 'Bảo', '2020-04-19', 'Nam', '28 Trần Hưng Đạo, P.7, Q.5, TP.HCM', 'Phạm Thị Yến', '0918454647', 'Đang học'),
-('HS0018', '2023-2024', 'MAM1', 'Vũ Ngọc', 'Chi', '2020-06-21', 'Nữ', '45 An Dương Vương, P.8, Q.5, TP.HCM', 'Vũ Anh Dũng', '0989484950', 'Đang học'),
-('HS0019', '2023-2024', 'MAM1', 'Hoàng Anh', 'Duy', '2020-08-08', 'Nam', '72 Hồng Bàng, P.12, Q.5, TP.HCM', 'Hoàng Thị Kim Liên', '0908515253', 'Đang học'),
-('HS0020', '2023-2024', 'MAM1', 'Đặng Gia', 'Hân', '2020-10-30', 'Nữ', '91 Nguyễn Kim, P.12, Q.5, TP.HCM', 'Đặng Văn Nam', '0913545556', 'Đang học');
-
--- Lớp MAM2 (Năm sinh khoảng 2020)
-INSERT INTO HocSinh (MaHS, TenNamHoc, TenLop, HoDem, TenRieng, NgaySinh, GioiTinh, DiaChi, HoTenPhuHuynh, SDTPhuHuynh, TrangThaiHocTap) VALUES
-('HS0021', '2023-2024', 'MAM2', 'Bùi Tuấn', 'Kiệt', '2020-03-15', 'Nam', '112 Nguyễn Chí Thanh, P.3, Q.10, TP.HCM', 'Bùi Văn Hưng', '0903575859', 'Đang học'),
-('HS0022', '2023-2024', 'MAM2', 'Ngô Thảo', 'Linh', '2020-05-20', 'Nữ', '220 Vĩnh Viễn, P.4, Q.10, TP.HCM', 'Ngô Thị Thanh', '0918606162', 'Đang học'),
-('HS0023', '2023-2024', 'MAM2', 'Đỗ Minh', 'Mạnh', '2020-07-25', 'Nam', '330 Hòa Hảo, P.4, Q.10, TP.HCM', 'Đỗ Văn Toàn', '0989636465', 'Đang học'),
-('HS0024', '2023-2024', 'MAM2', 'Phan Khánh', 'Ngân', '2020-09-18', 'Nữ', '450 Bà Hạt, P.8, Q.10, TP.HCM', 'Phan Thị Mai', '0908666768', 'Đang học'),
-('HS0025', '2023-2024', 'MAM2', 'Lý Gia', 'Phát', '2020-11-22', 'Nam', '580 Nhật Tảo, P.7, Q.10, TP.HCM', 'Lý Văn Kiên', '0913697071', 'Đang học');
-
--- Lớp NT1 (Năm sinh khoảng 2021)
-INSERT INTO HocSinh (MaHS, TenNamHoc, TenLop, HoDem, TenRieng, NgaySinh, GioiTinh, DiaChi, HoTenPhuHuynh, SDTPhuHuynh, TrangThaiHocTap) VALUES
-('HS0026', '2023-2024', 'NT1', 'Trần Bảo', 'Quyên', '2021-02-14', 'Nữ', '15 Hoàng Văn Thụ, P.4, Q.Tân Bình, TP.HCM', 'Trần Minh Trí', '0903727374', 'Đang học'),
-('HS0027', '2023-2024', 'NT1', 'Nguyễn Anh', 'Sơn', '2021-04-16', 'Nam', '28 Lê Văn Sỹ, P.1, Q.Tân Bình, TP.HCM', 'Nguyễn Thị Thu', '0918757677', 'Đang học'),
-('HS0028', '2023-2024', 'NT1', 'Lê Ngọc', 'Thủy', '2021-06-18', 'Nữ', '45 Trường Chinh, P.14, Q.Tân Bình, TP.HCM', 'Lê Hoàng Anh', '0989787980', 'Đang học'),
-('HS0029', '2023-2024', 'NT1', 'Phạm Minh', 'Tú', '2021-08-20', 'Nam', '72 Âu Cơ, P.9, Q.Tân Bình, TP.HCM', 'Phạm Văn Bảy', '0908818283', 'Đang học'),
-('HS0030', '2023-2024', 'NT1', 'Vũ Khánh', 'Vân', '2021-10-22', 'Nữ', '91 Lạc Long Quân, P.10, Q.Tân Bình, TP.HCM', 'Vũ Thị Hồng', '0913848586', 'Đang học');
+-- Lớp NT1 (2024-2025) - Sinh năm 2022/2023
+(1, '2024-2025', 'NT1', 'Nguyễn Văn', 'An', '2022-10-20', 'Nam', '110 Lê Lợi, Phường 3, Quận Gò Vấp, TP.HCM', 'Nguyễn Văn Bình', '0903111222', 'Đang học'),
+(2, '2024-2025', 'NT1', 'Trần Ngọc', 'Bảo Châu', '2023-01-15', 'Nữ', '212 Võ Văn Tần, Phường 6, Quận 3, TP.HCM', 'Trần Thị Thúy', '0918333444', 'Đang học'),
+(3, '2024-2025', 'NT1', 'Hoàng Gia', 'Minh', '2022-11-01', 'Nam', '12 Nguyễn Huệ, Quận 1, TP.HCM', 'Hoàng Văn Sơn', '0903123456', 'Đang học'),
+(4, '2024-2025', 'NT1', 'Lê Yến', 'Nhi', '2023-02-05', 'Nữ', '45 Pasteur, Quận 1, TP.HCM', 'Lê Văn An', '0918789012', 'Đang học'),
+-- Lớp MAM1 (2024-2025) - Sinh năm 2021
+(1, '2024-2025', 'MAM1', 'Lê Hoàng', 'Khánh', '2021-01-20', 'Nam', '305 Nam Kỳ Khởi Nghĩa, Phường 8, Quận 3, TP.HCM', 'Lê Văn Dũng', '0988555666', 'Đang học'),
+(2, '2024-2025', 'MAM1', 'Phạm Gia', 'Hân', '2021-03-30', 'Nữ', '410 Hoàng Văn Thụ, Phường 4, Quận Tân Bình, TP.HCM', 'Phạm Thị Lan Anh', '0933777888', 'Đang học'),
+(3, '2024-2025', 'MAM1', 'Đặng Minh', 'Trí', '2021-02-14', 'Nam', '515 Nguyễn Văn Cừ, Phường 4, Quận 5, TP.HCM', 'Đặng Hoài Nam', '0909999000', 'Đang học'),
+(4, '2024-2025', 'MAM1', 'Trịnh Bảo', 'Long', '2021-04-10', 'Nam', '210 Lê Lợi, Gò Vấp, TP.HCM', 'Trịnh Hoài Nam', '0988111222', 'Đang học'),
+(5, '2024-2025', 'MAM1', 'Võ Thị', 'Kim Anh', '2021-05-20', 'Nữ', '33 Võ Văn Tần, Quận 3, TP.HCM', 'Võ Thành Trung', '0933333444', 'Đang học'),
+(6, '2024-2025', 'MAM1', 'Nguyễn Tấn', 'Phát', '2021-06-15', 'Nam', '89 Nam Kỳ Khởi Nghĩa, Quận 3, TP.HCM', 'Nguyễn Thị Sáu', '0905555666', 'Đang học'),
+-- Lớp MAM2 (2024-2025) - Sinh năm 2021
+(1, '2024-2025', 'MAM2', 'Vũ Nhật', 'Anh', '2021-06-10', 'Nam', '180 Cao Thắng, Phường 11, Quận 10, TP.HCM', 'Vũ Đức Long', '0905121121', 'Đang học'),
+(2, '2024-2025', 'MAM2', 'Hoàng Yến', 'Linh', '2021-07-05', 'Nữ', '15 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận, TP.HCM', 'Hoàng Anh Tuấn', '0917232232', 'Đang học'),
+(3, '2024-2025', 'MAM2', 'Đỗ Phương', 'Vy', '2021-08-01', 'Nữ', '112 Hai Bà Trưng, Quận 1, TP.HCM', 'Đỗ Mỹ Linh', '0908777888', 'Đang học'),
+(4, '2024-2025', 'MAM2', 'Lý Gia', 'Huy', '2021-09-12', 'Nam', '55A Nguyễn Thị Minh Khai, Quận 1, TP.HCM', 'Lý Ngọc Mai', '0913999000', 'Đang học'),
+-- Lớp CHOI1 (2024-2025) - Sinh năm 2020
+(1, '2024-2025', 'CHOI1', 'Mai Thanh', 'Phong', '2020-04-12', 'Nam', '66 Thành Thái, Phường 14, Quận 10, TP.HCM', 'Mai Anh Thư', '0987654321', 'Đang học'),
+(2, '2024-2025', 'CHOI1', 'Lý Ánh', 'Nguyệt', '2020-05-22', 'Nữ', '112 Hai Bà Trưng, Phường Đa Kao, Quận 1, TP.HCM', 'Lý Ngọc Mai', '0911980776', 'Đang học'),
+(3, '2024-2025', 'CHOI1', 'Phan Gia', 'Hân', '2020-07-11', 'Nữ', '404 Hoàng Văn Thụ, Tân Bình, TP.HCM', 'Phan Thanh Thảo', '0902121121', 'Đang học'),
+(4, '2024-2025', 'CHOI1', 'Trần Minh', 'Quân', '2020-08-19', 'Nam', '789 CMT8, Quận 10, TP.HCM', 'Trần Văn Mạnh', '0987232232', 'Đang học'),
+(5, '2024-2025', 'CHOI1', 'Hà Bảo', 'Trâm', '2020-09-30', 'Nữ', '34 An Dương Vương, Quận 5, TP.HCM', 'Hà Thị Lệ', '0912343343', 'Đang học'),
+(6, '2024-2025', 'CHOI1', 'Lê Văn', 'Thiện', '2020-10-15', 'Nam', '123/4 Hùng Vương, Quận 6, TP.HCM', 'Lê Thị Hoa', '0901565565', 'Đang học'),
+-- Lớp LA1 (2024-2025) - Sinh năm 2019
+(1, '2024-2025', 'LA1', 'Võ Nguyễn', 'Tú Uyên', '2019-10-25', 'Nữ', '789 Cách Mạng Tháng Tám, Phường 15, Quận 10, TP.HCM', 'Võ Thanh Tùng', '0913123123', 'Đang học'),
+(2, '2024-2025', 'LA1', 'Bùi Gia', 'Bảo', '2019-12-05', 'Nam', '700 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận, TP.HCM', 'Bùi Thị Hà', '0902456456', 'Đang học'),
+(3, '2024-2025', 'LA1', 'Ngô Khánh', 'An', '2019-11-11', 'Nữ', '90 Lý Thường Kiệt, Phường 14, Quận 10, TP.HCM', 'Ngô Văn Hùng', '0905898898', 'Đang học'),
+(4, '2024-2025', 'LA1', 'Hoàng Công', 'Sơn', '2019-01-28', 'Nam', '77 Lạc Long Quân, Quận 11, TP.HCM', 'Hoàng Văn Bốn', '0904787787', 'Đang học'),
+(5, '2024-2025', 'LA1', 'Nguyễn Phương', 'Thảo', '2019-02-17', 'Nữ', '227 Nguyễn Văn Cừ, Quận 5, TP.HCM', 'Nguyễn Thu Hà', '0918898898', 'Đang học'),
+(6, '2024-2025', 'LA1', 'Phạm Hữu', 'Tâm', '2019-03-22', 'Nam', '88 Ông Ích Khiêm, Quận 11, TP.HCM', 'Phạm Hữu Năm', '0907101101', 'Đang học'),
+-- Lớp LA2 (2024-2025) - Sinh năm 2019
+(1, '2024-2025', 'LA2', 'Trần Hữu', 'Quân', '2019-08-01', 'Nam', '55A Nguyễn Thị Minh Khai, Phường Bến Thành, Quận 1, TP.HCM', 'Trần Văn Mạnh', '0908767767', 'Đang học'),
+(2, '2024-2025', 'LA2', 'Phạm Thùy', 'Dung', '2019-09-09', 'Nữ', '45 Pasteur, Phường Nguyễn Thái Bình, Quận 1, TP.HCM', 'Phạm Thị Lan', '0912345678', 'Đang học'),
+(3, '2024-2025', 'LA2', 'Mai Anh', 'Đào', '2019-10-02', 'Nữ', '66 Thành Thái, Quận 10, TP.HCM', 'Mai Anh Thư', '0988111333', 'Đang học'),
+(4, '2024-2025', 'LA2', 'Bùi Văn', 'Nam', '2019-11-07', 'Nam', '15 Lê Văn Sỹ, Phú Nhuận, TP.HCM', 'Bùi Thị Bích', '0906444555', 'Đã nghỉ học'),
+(5, '2024-2025', 'LA2', 'Hoàng Minh', 'Long', '2019-12-19', 'Nam', '89 Nam Kỳ Khởi Nghĩa, Quận 3, TP.HCM', 'Hoàng Minh Đức', '0909666777', 'Đang học'),
+(6, '2024-2025', 'LA2', 'Đặng Bảo', 'Ngọc', '2019-07-14', 'Nữ', '404 Hoàng Văn Thụ, Tân Bình, TP.HCM', 'Đặng Kim Oanh', '0912888999', 'Đang học');
 
 
--- ======================================================================
--- ****** HỌC SINH NĂM HỌC 2024-2025 ******
--- ======================================================================
--- Ghi chú: Một số học sinh cũ từ năm 2023-2024 được "lên lớp" và một số học sinh mới được thêm vào.
--- Để đơn giản, ta tạo các bản ghi mới với mã HS mới.
-
--- Lớp LA1 (Năm sinh khoảng 2019 - chuyển lên từ khối Chồi)
-INSERT INTO HocSinh (MaHS, TenNamHoc, TenLop, HoDem, TenRieng, NgaySinh, GioiTinh, DiaChi, HoTenPhuHuynh, SDTPhuHuynh, TrangThaiHocTap) VALUES
-('HS0031', '2024-2025', 'LA1', 'Phan Tuấn', 'Sơn', '2019-01-25', 'Nam', '101 Cách Mạng Tháng Tám, P.15, Q.10, TP.HCM', 'Phan Văn Hùng', '0908272829', 'Đang học'),
-('HS0032', '2024-2025', 'LA1', 'Võ Ngọc', 'Thảo', '2019-03-17', 'Nữ', '205 Sư Vạn Hạnh, P.12, Q.10, TP.HCM', 'Võ Thị Kim Chi', '0913303132', 'Đang học'),
-('HS0033', '2024-2025', 'LA1', 'Lý Minh', 'Thành', '2019-05-28', 'Nam', '310 Ba Tháng Hai, P.12, Q.10, TP.HCM', 'Lý Hùng', '0987333435', 'Đang học'),
-('HS0034', '2024-2025', 'LA1', 'Trần Thảo', 'Uyên', '2019-07-14', 'Nữ', '450 Nguyễn Tri Phương, P.9, Q.10, TP.HCM', 'Trần Minh Tâm', '0909363738', 'Đang học'),
-('HS0035', '2024-2025', 'LA1', 'Nguyễn Hoàng', 'Vũ', '2019-09-09', 'Nam', '580 Ngô Gia Tự, P.9, Q.10, TP.HCM', 'Nguyễn Thị Bích Thủy', '0918394041', 'Đang học');
-
--- Lớp LA2 (Năm sinh khoảng 2019 - học sinh mới)
-INSERT INTO HocSinh (MaHS, TenNamHoc, TenLop, HoDem, TenRieng, NgaySinh, GioiTinh, DiaChi, HoTenPhuHuynh, SDTPhuHuynh, TrangThaiHocTap) VALUES
-('HS0036', '2024-2025', 'LA2', 'Hoàng Gia', 'Bảo', '2019-02-11', 'Nam', '111 Nguyễn Thượng Hiền, P.5, Q.Bình Thạnh, TP.HCM', 'Hoàng Tuấn Kiệt', '0903878889', 'Đang học'),
-('HS0037', '2024-2025', 'LA2', 'Đặng Thùy', 'Dương', '2019-04-13', 'Nữ', '222 Phan Xích Long, P.2, Q.Phú Nhuận, TP.HCM', 'Đặng Minh Tâm', '0918909192', 'Đang học'),
-('HS0038', '2024-2025', 'LA2', 'Bùi Minh', 'Hải', '2019-06-15', 'Nam', '333 Lê Quang Định, P.5, Q.Bình Thạnh, TP.HCM', 'Bùi Anh Tuấn', '0989939495', 'Đang học'),
-('HS0039', '2024-2025', 'LA2', 'Ngô Khánh', 'Huyền', '2019-08-17', 'Nữ', '444 Phan Đăng Lưu, P.3, Q.Phú Nhuận, TP.HCM', 'Ngô Thị Thu Hà', '0908969798', 'Đang học'),
-('HS0040', '2024-2025', 'LA2', 'Đỗ Hoàng', 'Khánh', '2019-10-19', 'Nam', '555 Xô Viết Nghệ Tĩnh, P.26, Q.Bình Thạnh, TP.HCM', 'Đỗ Minh Đức', '0913990001', 'Đang học');
-
--- Lớp CHOI1 (Năm sinh khoảng 2020 - chuyển lên từ khối Mầm)
-INSERT INTO HocSinh (MaHS, TenNamHoc, TenLop, HoDem, TenRieng, NgaySinh, GioiTinh, DiaChi, HoTenPhuHuynh, SDTPhuHuynh, TrangThaiHocTap) VALUES
-('HS0041', '2024-2025', 'CHOI1', 'Lê Bảo', 'An', '2020-02-02', 'Nữ', '15 Nguyễn Trãi, P.2, Q.5, TP.HCM', 'Lê Văn Tám', '0903424344', 'Đang học'),
-('HS0042', '2024-2025', 'CHOI1', 'Phạm Minh', 'Bảo', '2020-04-19', 'Nam', '28 Trần Hưng Đạo, P.7, Q.5, TP.HCM', 'Phạm Thị Yến', '0918454647', 'Đang học'),
-('HS0043', '2024-2025', 'CHOI1', 'Vũ Ngọc', 'Chi', '2020-06-21', 'Nữ', '45 An Dương Vương, P.8, Q.5, TP.HCM', 'Vũ Anh Dũng', '0989484950', 'Đang học'),
-('HS0044', '2024-2025', 'CHOI1', 'Hoàng Anh', 'Duy', '2020-08-08', 'Nam', '72 Hồng Bàng, P.12, Q.5, TP.HCM', 'Hoàng Thị Kim Liên', '0908515253', 'Đang học'),
-('HS0045', '2024-2025', 'CHOI1', 'Đặng Gia', 'Hân', '2020-10-30', 'Nữ', '91 Nguyễn Kim, P.12, Q.5, TP.HCM', 'Đặng Văn Nam', '0913545556', 'Đang học');
-
--- TIẾP TỤC DỮ LIỆU BẢNG HocSinh (Phần 2)
-
--- Lớp MAM1 (Năm sinh khoảng 2021 - chuyển lên từ khối Nhà trẻ) - Tiếp theo
-INSERT INTO HocSinh (MaHS, TenNamHoc, TenLop, HoDem, TenRieng, NgaySinh, GioiTinh, DiaChi, HoTenPhuHuynh, SDTPhuHuynh, TrangThaiHocTap) VALUES
-('HS0048', '2024-2025', 'MAM1', 'Lê Ngọc', 'Thủy', '2021-06-18', 'Nữ', '45 Trường Chinh, P.14, Q.Tân Bình, TP.HCM', 'Lê Hoàng Anh', '0989787980', 'Đang học'),
-('HS0049', '2024-2025', 'MAM1', 'Phạm Minh', 'Tú', '2021-08-20', 'Nam', '72 Âu Cơ, P.9, Q.Tân Bình, TP.HCM', 'Phạm Văn Bảy', '0908818283', 'Đang học'),
-('HS0050', '2024-2025', 'MAM1', 'Vũ Khánh', 'Vân', '2021-10-22', 'Nữ', '91 Lạc Long Quân, P.10, Q.Tân Bình, TP.HCM', 'Vũ Thị Hồng', '0913848586', 'Đang học');
-
--- Lớp MAM2 (Năm sinh khoảng 2021 - học sinh mới)
-INSERT INTO HocSinh (MaHS, TenNamHoc, TenLop, HoDem, TenRieng, NgaySinh, GioiTinh, DiaChi, HoTenPhuHuynh, SDTPhuHuynh, TrangThaiHocTap) VALUES
-('HS0051', '2024-2025', 'MAM2', 'Trần Gia', 'Khiêm', '2021-01-20', 'Nam', '10 Phan Đình Phùng, P.2, Q.Phú Nhuận, TP.HCM', 'Trần Văn Hải', '0903878880', 'Đang học'),
-('HS0052', '2024-2025', 'MAM2', 'Nguyễn Ngọc', 'Lan', '2021-03-25', 'Nữ', '20 Thích Quảng Đức, P.5, Q.Phú Nhuận, TP.HCM', 'Nguyễn Thị Hoa', '0918909191', 'Đang học'),
-('HS0053', '2024-2025', 'MAM2', 'Lê Minh', 'Nhật', '2021-05-30', 'Nam', '30 Huỳnh Văn Bánh, P.11, Q.Phú Nhuận, TP.HCM', 'Lê Anh Dũng', '0989939494', 'Đang học'),
-('HS0054', '2024-2025', 'MAM2', 'Phạm Thùy', 'My', '2021-07-10', 'Nữ', '40 Nguyễn Văn Trỗi, P.15, Q.Phú Nhuận, TP.HCM', 'Phạm Thị Lan', '0908969797', 'Đang học'),
-('HS0055', '2024-2025', 'MAM2', 'Vũ Hoàng', 'Nam', '2021-09-05', 'Nam', '50 Nguyễn Kiệm, P.3, Q.Gò Vấp, TP.HCM', 'Vũ Minh Quân', '0913990000', 'Đang học');
-
--- Lớp NT1 (Năm sinh khoảng 2022 - học sinh mới hoàn toàn)
-INSERT INTO HocSinh (MaHS, TenNamHoc, TenLop, HoDem, TenRieng, NgaySinh, GioiTinh, DiaChi, HoTenPhuHuynh, SDTPhuHuynh, TrangThaiHocTap) VALUES
-('HS0056', '2024-2025', 'NT1', 'Hoàng Bảo', 'Anh', '2022-02-10', 'Nữ', '11 Quang Trung, P.10, Q.Gò Vấp, TP.HCM', 'Hoàng Văn Sơn', '0903010203', 'Đang học'),
-('HS0057', '2024-2025', 'NT1', 'Đặng Minh', 'Bình', '2022-04-12', 'Nam', '22 Nguyễn Oanh, P.17, Q.Gò Vấp, TP.HCM', 'Đặng Thị Thảo', '0918040506', 'Đang học'),
-('HS0058', '2024-2025', 'NT1', 'Bùi Ngọc', 'Châu', '2022-06-14', 'Nữ', '33 Phan Văn Trị, P.7, Q.Gò Vấp, TP.HCM', 'Bùi Anh Khoa', '0989070809', 'Đang học'),
-('HS0059', '2024-2025', 'NT1', 'Ngô Tuấn', 'Dũng', '2022-08-16', 'Nam', '44 Lê Đức Thọ, P.13, Q.Gò Vấp, TP.HCM', 'Ngô Thị Lan Anh', '0908101112', 'Đang học'),
-('HS0060', '2024-2025', 'NT1', 'Đỗ Thảo', 'Giang', '2022-10-18', 'Nữ', '55 Thống Nhất, P.11, Q.Gò Vấp, TP.HCM', 'Đỗ Minh Quân', '0979131415', 'Đang học');
-
--- Cập nhật sĩ số cho các lớp năm học 2023-2024
-UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc = '2023-2024' AND HocSinh.TenLop = 'LA1') WHERE TenNamHoc = '2023-2024' AND TenLop = 'LA1';
-UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc = '2023-2024' AND HocSinh.TenLop = 'LA2') WHERE TenNamHoc = '2023-2024' AND TenLop = 'LA2';
-UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc = '2023-2024' AND HocSinh.TenLop = 'CHOI1') WHERE TenNamHoc = '2023-2024' AND TenLop = 'CHOI1';
-UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc = '2023-2024' AND HocSinh.TenLop = 'MAM1') WHERE TenNamHoc = '2023-2024' AND TenLop = 'MAM1';
-UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc = '2023-2024' AND HocSinh.TenLop = 'MAM2') WHERE TenNamHoc = '2023-2024' AND TenLop = 'MAM2';
-UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc = '2023-2024' AND HocSinh.TenLop = 'NT1') WHERE TenNamHoc = '2023-2024' AND TenLop = 'NT1';
-
--- Cập nhật sĩ số cho các lớp năm học 2024-2025
-UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc = '2024-2025' AND HocSinh.TenLop = 'LA1') WHERE TenNamHoc = '2024-2025' AND TenLop = 'LA1';
-UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc = '2024-2025' AND HocSinh.TenLop = 'LA2') WHERE TenNamHoc = '2024-2025' AND TenLop = 'LA2';
-UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc = '2024-2025' AND HocSinh.TenLop = 'CHOI1') WHERE TenNamHoc = '2024-2025' AND TenLop = 'CHOI1';
-UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc = '2024-2025' AND HocSinh.TenLop = 'MAM1') WHERE TenNamHoc = '2024-2025' AND TenLop = 'MAM1';
-UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc = '2024-2025' AND HocSinh.TenLop = 'MAM2') WHERE TenNamHoc = '2024-2025' AND TenLop = 'MAM2';
-UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc = '2024-2025' AND HocSinh.TenLop = 'NT1') WHERE TenNamHoc = '2024-2025' AND TenLop = 'NT1';
 
 
 
