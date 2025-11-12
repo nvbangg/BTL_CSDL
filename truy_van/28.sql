@@ -1,0 +1,4 @@
+ SELECT MonAn
+ FROM LanAnMonAn
+ WHERE NgayAn = '2025-11-15'
+ ORDER BY MonAn;
