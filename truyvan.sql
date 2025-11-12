@@ -67,5 +67,5 @@ V. Truy vấn về Bán trú và Bữa ăn (26–28)
 VI. Truy vấn về Cơ sở vật chất và Quản lý phòng (29–30)
 
 29. Liệt kê danh sách các phòng học cùng sức chứa và người phụ trách quản lý.
-
+  
 30. Tính tổng giá trị cơ sở vật chất của từng phòng (tổng GiaTri theo TenPhong).
