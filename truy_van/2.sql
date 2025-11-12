@@ -1,4 +1,4 @@
- -- 29. Liệt kê danh sách các phòng học cùng sức chứa và người phụ trách quản lý.
+ -- 2. Liệt kê danh sách các phòng học cùng sức chứa và người phụ trách quản lý.
  SELECT p.TenPhong, p.SucChua, ns.MaNS AS MaNguoiQuanLy, ns.HoTen AS NguoiQuanLy
  FROM Phong p
  LEFT JOIN QuanLy q ON q.TenPhong = p.TenPhong
