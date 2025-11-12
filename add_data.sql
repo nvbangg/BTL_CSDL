@@ -70,32 +70,32 @@ INSERT INTO LanAn (NgayAn) VALUES
 
 -- Dữ liệu cho bảng NhanSu
 -- Ghi chú: MaHT và MaHP tạm thời để NULL
-INSERT INTO NhanSu (MaNS, HoTen, NgaySinh, GioiTinh, DiaChi, Email, TrangThaiLamViec, CCCD, NgayVaoLam, MaHT, MaHP) VALUES
+INSERT INTO NhanSu (MaNS, HoTen, NgaySinh, GioiTinh, DiaChi, Email, TrangThaiLamViec, CCCD, NgayVaoLam) VALUES
 -- Ban Giám Hiệu
-('BGH01', 'Trần Thị Minh Nguyệt', '1975-08-20', 'Nữ', '12 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP.HCM', 'nguyet.ttm@truongmamnon.edu.vn', 'Đang làm việc', '079175012345', '2010-07-15', NULL, NULL),
-('BGH02', 'Lê Văn An', '1980-04-15', 'Nam', '45 Pasteur, Phường Nguyễn Thái Bình, Quận 1, TP.HCM', 'an.lv@truongmamnon.edu.vn', 'Đang làm việc', '083180054321', '2012-08-01', NULL, NULL),
+('BGH01', 'Trần Thị Minh Nguyệt', '1975-08-20', 'Nữ', '12 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP.HCM', 'nguyet.ttm@truongmamnon.edu.vn', 'Đang làm việc', '079175012345', '2010-07-15'),
+('BGH02', 'Lê Văn An', '1980-04-15', 'Nam', '45 Pasteur, Phường Nguyễn Thái Bình, Quận 1, TP.HCM', 'an.lv@truongmamnon.edu.vn', 'Đang làm việc', '083180054321', '2012-08-01'),
 
 -- Giáo viên
-('GV001', 'Nguyễn Thu Hà', '1992-11-10', 'Nữ', '210 Lê Lợi, Phường 3, Quận Gò Vấp, TP.HCM', 'ha.nt@truongmamnon.edu.vn', 'Đang làm việc', '054192009876', '2018-08-20', NULL, NULL),
-('GV002', 'Phạm Thị Lan', '1995-02-25', 'Nữ', '33 Võ Văn Tần, Phường 6, Quận 3, TP.HCM', 'lan.pt@truongmamnon.edu.vn', 'Đang làm việc', '067195011223', '2020-08-15', NULL, NULL),
-('GV003', 'Hoàng Minh Đức', '1990-07-19', 'Nam', '89 Nam Kỳ Khởi Nghĩa, Phường 8, Quận 3, TP.HCM', 'duc.hm@truongmamnon.edu.vn', 'Đang làm việc', '077190033445', '2017-02-10', NULL, NULL),
-('GV004', 'Lý Ngọc Mai', '1998-09-03', 'Nữ', '112 Hai Bà Trưng, Phường Đa Kao, Quận 1, TP.HCM', 'mai.ln@truongmamnon.edu.vn', 'Đang làm việc', '091198077665', '2022-08-25', NULL, NULL),
-('GV005', 'Võ Thành Trung', '1996-01-30', 'Nam', '55A Nguyễn Thị Minh Khai, Phường Bến Thành, Quận 1, TP.HCM', 'trung.vt@truongmamnon.edu.vn', 'Đang làm việc', '089196099887', '2021-08-22', NULL, NULL),
-('GV006', 'Đặng Kim Oanh', '1993-06-12', 'Nữ', '404 Hoàng Văn Thụ, Phường 4, Quận Tân Bình, TP.HCM', 'oanh.dk@truongmamnon.edu.vn', 'Đang làm việc', '058193012121', '2019-01-15', NULL, NULL),
-('GV007', 'Trịnh Hoài Nam', '1997-03-08', 'Nam', '789 Cách Mạng Tháng Tám, Phường 15, Quận 10, TP.HCM', 'nam.th@truongmamnon.edu.vn', 'Đang làm việc', '079197045454', '2022-02-20', NULL, NULL),
-('GV008', 'Bùi Thị Bích', '1991-10-05', 'Nữ', '15 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận, TP.HCM', 'bich.bt@truongmamnon.edu.vn', 'Đã nghỉ việc', '060191067676', '2016-08-18', NULL, NULL),
+('GV001', 'Nguyễn Thu Hà', '1992-11-10', 'Nữ', '210 Lê Lợi, Phường 3, Quận Gò Vấp, TP.HCM', 'ha.nt@truongmamnon.edu.vn', 'Đang làm việc', '054192009876', '2018-08-20'),
+('GV002', 'Phạm Thị Lan', '1995-02-25', 'Nữ', '33 Võ Văn Tần, Phường 6, Quận 3, TP.HCM', 'lan.pt@truongmamnon.edu.vn', 'Đang làm việc', '067195011223', '2020-08-15'),
+('GV003', 'Hoàng Minh Đức', '1990-07-19', 'Nam', '89 Nam Kỳ Khởi Nghĩa, Phường 8, Quận 3, TP.HCM', 'duc.hm@truongmamnon.edu.vn', 'Đang làm việc', '077190033445', '2017-02-10'),
+('GV004', 'Lý Ngọc Mai', '1998-09-03', 'Nữ', '112 Hai Bà Trưng, Phường Đa Kao, Quận 1, TP.HCM', 'mai.ln@truongmamnon.edu.vn', 'Đang làm việc', '091198077665', '2022-08-25'),
+('GV005', 'Võ Thành Trung', '1996-01-30', 'Nam', '55A Nguyễn Thị Minh Khai, Phường Bến Thành, Quận 1, TP.HCM', 'trung.vt@truongmamnon.edu.vn', 'Đang làm việc', '089196099887', '2021-08-22'),
+('GV006', 'Đặng Kim Oanh', '1993-06-12', 'Nữ', '404 Hoàng Văn Thụ, Phường 4, Quận Tân Bình, TP.HCM', 'oanh.dk@truongmamnon.edu.vn', 'Đang làm việc', '058193012121', '2019-01-15'),
+('GV007', 'Trịnh Hoài Nam', '1997-03-08', 'Nam', '789 Cách Mạng Tháng Tám, Phường 15, Quận 10, TP.HCM', 'nam.th@truongmamnon.edu.vn', 'Đang làm việc', '079197045454', '2022-02-20'),
+('GV008', 'Bùi Thị Bích', '1991-10-05', 'Nữ', '15 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận, TP.HCM', 'bich.bt@truongmamnon.edu.vn', 'Đã nghỉ việc', '060191067676', '2016-08-18'),
 
 -- Nhân viên khác
-('KT001', 'Phan Thanh Thảo', '1988-12-01', 'Nữ', '227 Nguyễn Văn Cừ, Phường 4, Quận 5, TP.HCM', 'thao.pt@truongmamnon.edu.vn', 'Đang làm việc', '082188089898', '2015-05-20', NULL, NULL),
-('TQ001', 'Hà Thị Lệ', '1985-05-22', 'Nữ', '34 An Dương Vương, Phường 9, Quận 5, TP.HCM', 'le.ht@truongmamnon.edu.vn', 'Đang làm việc', '081185013131', '2014-11-11', NULL, NULL),
-('YT001', 'Mai Anh Thư', '1994-08-18', 'Nữ', '66 Thành Thái, Phường 14, Quận 10, TP.HCM', 'thu.ma@truongmamnon.edu.vn', 'Đang làm việc', '079194024242', '2020-09-01', NULL, NULL),
-('DB001', 'Ngô Văn Hùng', '1982-02-11', 'Nam', '90 Lý Thường Kiệt, Phường 14, Quận 10, TP.HCM', 'hung.nv@truongmamnon.edu.vn', 'Đang làm việc', '072182056565', '2019-03-03', NULL, NULL),
-('VP001', 'Đỗ Mỹ Linh', '1999-07-07', 'Nữ', '180 Cao Thắng, Phường 11, Quận 10, TP.HCM', 'linh.dm@truongmamnon.edu.vn', 'Đang làm việc', '093199087878', '2023-08-01', NULL, NULL),
-('BM001', 'Lê Thị Hoa', '1989-03-14', 'Nữ', '123/4 Hùng Vương, Phường 12, Quận 6, TP.HCM', 'hoa.lt@truongmamnon.edu.vn', 'Đang làm việc', '084189015151', '2021-06-10', NULL, NULL),
-('BM002', 'Trần Văn Mạnh', '1990-09-09', 'Nam', '56/2 Ngô Quyền, Phường 6, Quận 10, TP.HCM', 'manh.tv@truongmamnon.edu.vn', 'Đang làm việc', '080190026262', '2022-07-12', NULL, NULL),
-('VS001', 'Nguyễn Thị Sáu', '1978-10-10', 'Nữ', '45/8A Âu Cơ, Phường 9, Quận Tân Bình, TP.HCM', 'sau.nt@truongmamnon.edu.vn', 'Đang làm việc', '058178037373', '2018-04-14', NULL, NULL),
-('BV001', 'Hoàng Văn Bốn', '1970-06-28', 'Nam', '77 Lạc Long Quân, Phường 3, Quận 11, TP.HCM', 'bon.hv@truongmamnon.edu.vn', 'Đang làm việc', '062170048484', '2017-09-25', NULL, NULL),
-('BV002', 'Phạm Hữu Năm', '1972-01-01', 'Nam', '88 Ông Ích Khiêm, Phường 5, Quận 11, TP.HCM', 'nam.ph@truongmamnon.edu.vn', 'Đang làm việc', '065172059595', '2019-10-30', NULL, NULL);
+('KT001', 'Phan Thanh Thảo', '1988-12-01', 'Nữ', '227 Nguyễn Văn Cừ, Phường 4, Quận 5, TP.HCM', 'thao.pt@truongmamnon.edu.vn', 'Đang làm việc', '082188089898', '2015-05-20'),
+('TQ001', 'Hà Thị Lệ', '1985-05-22', 'Nữ', '34 An Dương Vương, Phường 9, Quận 5, TP.HCM', 'le.ht@truongmamnon.edu.vn', 'Đang làm việc', '081185013131', '2014-11-11'),
+('YT001', 'Mai Anh Thư', '1994-08-18', 'Nữ', '66 Thành Thái, Phường 14, Quận 10, TP.HCM', 'thu.ma@truongmamnon.edu.vn', 'Đang làm việc', '079194024242', '2020-09-01'),
+('DB001', 'Ngô Văn Hùng', '1982-02-11', 'Nam', '90 Lý Thường Kiệt, Phường 14, Quận 10, TP.HCM', 'hung.nv@truongmamnon.edu.vn', 'Đang làm việc', '072182056565', '2019-03-03'),
+('VP001', 'Đỗ Mỹ Linh', '1999-07-07', 'Nữ', '180 Cao Thắng, Phường 11, Quận 10, TP.HCM', 'linh.dm@truongmamnon.edu.vn', 'Đang làm việc', '093199087878', '2023-08-01'),
+('BM001', 'Lê Thị Hoa', '1989-03-14', 'Nữ', '123/4 Hùng Vương, Phường 12, Quận 6, TP.HCM', 'hoa.lt@truongmamnon.edu.vn', 'Đang làm việc', '084189015151', '2021-06-10'),
+('BM002', 'Trần Văn Mạnh', '1990-09-09', 'Nam', '56/2 Ngô Quyền, Phường 6, Quận 10, TP.HCM', 'manh.tv@truongmamnon.edu.vn', 'Đang làm việc', '080190026262', '2022-07-12'),
+('VS001', 'Nguyễn Thị Sáu', '1978-10-10', 'Nữ', '45/8A Âu Cơ, Phường 9, Quận Tân Bình, TP.HCM', 'sau.nt@truongmamnon.edu.vn', 'Đang làm việc', '058178037373', '2018-04-14'),
+('BV001', 'Hoàng Văn Bốn', '1970-06-28', 'Nam', '77 Lạc Long Quân, Phường 3, Quận 11, TP.HCM', 'bon.hv@truongmamnon.edu.vn', 'Đang làm việc', '062170048484', '2017-09-25'),
+('BV002', 'Phạm Hữu Năm', '1972-01-01', 'Nam', '88 Ông Ích Khiêm, Phường 5, Quận 11, TP.HCM', 'nam.ph@truongmamnon.edu.vn', 'Đang làm việc', '065172059595', '2019-10-30');
 
 
 INSERT INTO GiaoVien (MaNS_G, TrinhDoChuyenMon, PhongBan, ThamNienNghe) VALUES

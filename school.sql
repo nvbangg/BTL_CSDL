@@ -11,13 +11,7 @@ CREATE TABLE NhanSu (
     Email VARCHAR(100),
     TrangThaiLamViec VARCHAR(50),
     CCCD VARCHAR(12),
-    NgayVaoLam DATE,
-    MaHT VARCHAR(20),
-    MaHP VARCHAR(20),
-    FOREIGN KEY (MaHT)
-        REFERENCES NhanSu (MaNS),
-    FOREIGN KEY (MaHP)
-        REFERENCES NhanSu (MaNS)
+    NgayVaoLam DATE
 );
 
 CREATE TABLE BangLuong (
