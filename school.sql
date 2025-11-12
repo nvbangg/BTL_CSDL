@@ -10,19 +10,8 @@ CREATE TABLE NhanSu (
     DiaChi VARCHAR(255),
     Email VARCHAR(100) UNIQUE,
     TrangThaiLamViec VARCHAR(50),
-<<<<<<< HEAD
-    CCCD VARCHAR(12),
-    NgayVaoLam DATE
-=======
     CCCD VARCHAR(12) NOT NULL UNIQUE,
-    NgayVaoLam DATE,
-    MaHT VARCHAR(20),
-    MaHP VARCHAR(20),
-    FOREIGN KEY (MaHT)
-        REFERENCES NhanSu (MaNS),
-    FOREIGN KEY (MaHP)
-        REFERENCES NhanSu (MaNS)
->>>>>>> d9ab96c6be52f35776de8cc784167aa043f6b8ea
+    NgayVaoLam DATE
 );
 
 CREATE TABLE BangLuong (
