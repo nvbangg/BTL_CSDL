@@ -5,13 +5,13 @@ USE school;
 CREATE TABLE NhanSu (
     MaNS VARCHAR(20) PRIMARY KEY,
     HoTen VARCHAR(100) NOT NULL,
-    NgaySinh DATE,
-    GioiTinh VARCHAR(10),
+    NgaySinh DATE NOT NULL,
+    GioiTinh VARCHAR(10) NOT NULL CHECK (GioiTinh IN ('Nam', 'Nữ')),
     DiaChi VARCHAR(255),
-    Email VARCHAR(100) UNIQUE,
-    TrangThaiLamViec VARCHAR(50),
+    Email VARCHAR(100) UNIQUE NOT NULL,
+    TrangThaiLamViec VARCHAR(50) NOT NULL CHECK (TrangThaiLamViec IN ('Đang làm việc', 'Đã nghỉ việc')),
     CCCD VARCHAR(12) NOT NULL UNIQUE,
-    NgayVaoLam DATE
+    NgayVaoLam DATE NOT NULL
 );
 
 CREATE TABLE BangLuong (
@@ -33,8 +33,8 @@ CREATE TABLE NhanSu_SDT (
 );
 
 CREATE TABLE ViTriCV_MoTaCV (
-    ViTriCongViec VARCHAR(100),
-    MoTaCongViec VARCHAR(100),
+    ViTriCongViec VARCHAR(100) NOT NULL,
+    MoTaCongViec VARCHAR(100) NOT NULL,
     PRIMARY KEY (ViTriCongViec)
 );
 
@@ -47,23 +47,23 @@ CREATE TABLE CanBoNhanVien (
 
 CREATE TABLE GiaoVien (
     MaNS_G VARCHAR(20) PRIMARY KEY,
-    TrinhDoChuyenMon VARCHAR(100),
-    PhongBan VARCHAR(100),
-    ThamNienNghe INT,
+    TrinhDoChuyenMon VARCHAR(100) NOT NULL,
+    PhongBan VARCHAR(100) NOT NULL,
+    ThamNienNghe INT NOT NULL CHECK (ThamNienNghe >= 0),
     FOREIGN KEY (MaNS_G) REFERENCES NhanSu(MaNS) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE NamHoc (
     TenNamHoc VARCHAR(20) PRIMARY KEY,
-    NgayBatDau DATE,
-    NgayKetThuc DATE,
+    NgayBatDau DATE NOT NULL,
+    NgayKetThuc DATE NOT NULL,
     CHECK (NgayBatDau < NgayKetThuc)
 );
 
 CREATE TABLE KhoanPhiTrongNam (
     TenNamHoc VARCHAR(20),
     TenKhoanPhi VARCHAR(100),
-    SoTienPhaiDong BIGINT CHECK (SoTienPhaiDong >= 0),
+    SoTienPhaiDong BIGINT NOT NULL CHECK (SoTienPhaiDong > 0),
     PRIMARY KEY (TenNamHoc, TenKhoanPhi),
     FOREIGN KEY (TenNamHoc) REFERENCES NamHoc(TenNamHoc)  ON UPDATE CASCADE ON DELETE CASCADE
 );
@@ -72,8 +72,8 @@ CREATE TABLE LopHoc (
 	TenNamHoc VARCHAR(20),
     TenLop VARCHAR(10),
     MaNS_G VARCHAR(20),
-    SiSo INT CHECK (SiSo >= 0),
-    PhongHocChinh VARCHAR(10),
+    SiSo INT NOT NULL DEFAULT 0 CHECK (SiSo >= 0),
+    PhongHocChinh VARCHAR(10) NOT NULL,
     PRIMARY KEY (TenNamHoc, TenLop),
     FOREIGN KEY (MaNS_G) REFERENCES GiaoVien(MaNS_G) ON UPDATE CASCADE ON DELETE SET NULL,
     FOREIGN KEY (TenNamHoc) REFERENCES NamHoc(TenNamHoc) ON UPDATE CASCADE ON DELETE CASCADE
@@ -83,48 +83,48 @@ CREATE TABLE HocSinh (
     MaHS INT,
     TenNamHoc VARCHAR(20),
     TenLop VARCHAR(10),
-    HoDem VARCHAR(50),
-    TenRieng VARCHAR(50),
-    NgaySinh DATE,
-    GioiTinh VARCHAR(10),
+    HoDem VARCHAR(50) NOT NULL,
+    TenRieng VARCHAR(50) NOT NULL,
+    NgaySinh DATE NOT NULL,
+    GioiTinh VARCHAR(10) NOT NULL CHECK (GioiTinh IN ('Nam', 'Nữ')),
     DiaChi VARCHAR(255),
-    HoTenPhuHuynh VARCHAR(100),
-    SDTPhuHuynh VARCHAR(15),
-    TrangThaiHocTap VARCHAR(50),
+    HoTenPhuHuynh VARCHAR(100) NOT NULL,
+    SDTPhuHuynh VARCHAR(15) NOT NULL,
+    TrangThaiHocTap VARCHAR(50) NOT NULL DEFAULT 'Đang học' CHECK (TrangThaiHocTap IN ('Đang học', 'Bảo lưu', 'Nghỉ học', 'Đã nghỉ học')),
     PRIMARY KEY(TenNamHoc, TenLop, MaHS),
     FOREIGN KEY (TenNamHoc, TenLop) REFERENCES LopHoc(TenNamHoc, TenLop) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE LanDongPhi (
     MaGiaoDich VARCHAR(20) PRIMARY KEY, 
-    ThoiGianDong DATE,
-    SoTienDaDong BIGINT CHECK (SoTienDaDong >= 0),
-    ConNo BIGINT CHECK (ConNo >= 0),
-    TenKhoanPhi VARCHAR(100),
-    TenNamHoc VARCHAR(20),
-    TenLop VARCHAR(10),
-    MaHS INT,
+    ThoiGianDong DATE NOT NULL,
+    SoTienDaDong BIGINT NOT NULL CHECK (SoTienDaDong >= 0),
+    ConNo BIGINT NOT NULL DEFAULT 0 CHECK (ConNo >= 0),
+    TenKhoanPhi VARCHAR(100) NOT NULL,
+    TenNamHoc VARCHAR(20) NOT NULL,
+    TenLop VARCHAR(10) NOT NULL,
+    MaHS INT NOT NULL,
     FOREIGN KEY (TenNamHoc, TenLop, MaHS) REFERENCES HocSinh(TenNamHoc, TenLop, MaHS) ON UPDATE CASCADE ON DELETE SET NULL,
     FOREIGN KEY (TenNamHoc, TenKhoanPhi) REFERENCES KhoanPhiTrongNam(TenNamHoc, TenKhoanPhi)
 );
 
 CREATE TABLE LanAn (
-	NgayAn DATE PRIMARY KEY
+	NgayAn DATE PRIMARY KEY NOT NULL
 );
 
 CREATE TABLE LanAnMonAn (
-	NgayAn DATE,
-    MonAn VARCHAR(50),
+	NgayAn DATE NOT NULL,
+    MonAn VARCHAR(50) NOT NULL,
     FOREIGN KEY (NgayAn) REFERENCES LanAn(NgayAn)  ON UPDATE CASCADE ON DELETE CASCADE,
     PRIMARY KEY (NgayAn, MonAn)
 );
 
 CREATE TABLE ThamGiaBanTru (
-    TenNamHoc VARCHAR(20),
-    TenLop VARCHAR(10),
-    MaHS INT,
-    NgayAn DATE,
-    MaNS_G VARCHAR(20),
+    TenNamHoc VARCHAR(20) NOT NULL,
+    TenLop VARCHAR(10) NOT NULL,
+    MaHS INT NOT NULL,
+    NgayAn DATE NOT NULL,
+    MaNS_G VARCHAR(20) NOT NULL,
     PRIMARY KEY (TenNamHoc, TenLop, MaHS, NgayAn),
     FOREIGN KEY (TenNamHoc, TenLop, MaHS) REFERENCES HocSinh(TenNamHoc, TenLop, MaHS) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (NgayAn) REFERENCES LanAn(NgayAn) ON UPDATE CASCADE ON DELETE CASCADE,
@@ -132,10 +132,9 @@ CREATE TABLE ThamGiaBanTru (
 );
 
 CREATE TABLE Phong(
-	TenPhong VARCHAR(10),
-	SucChua INT CHECK (SucChua >= 0),
-    ChucNang VARCHAR(100),
-    PRIMARY KEY (TenPhong)
+	TenPhong VARCHAR(10) PRIMARY KEY,
+	SucChua INT NOT NULL CHECK (SucChua > 0),
+    ChucNang VARCHAR(100) NOT NULL
    ); 
    
 CREATE TABLE QuanLy(
@@ -149,10 +148,10 @@ CREATE TABLE QuanLy(
 CREATE TABLE CoSoVatChat (
     TenPhong VARCHAR(10),
     TenVatTu VARCHAR(100),
-    SoLuong INT CHECK (SoLuong >= 0),
-    NgayTrangBi DATE,
-    TinhTrang VARCHAR(50),
-    GiaTri INT CHECK (GiaTri >= 0),
+    SoLuong INT NOT NULL CHECK (SoLuong > 0),
+    NgayTrangBi DATE NOT NULL,
+    TinhTrang VARCHAR(50) NOT NULL CHECK (TinhTrang IN ('Tốt', 'Bình thường', 'Cần sửa chữa', 'Hỏng')),
+    GiaTri INT NOT NULL CHECK (GiaTri > 0),
     FOREIGN KEY (TenPhong) REFERENCES Phong(TenPhong) ON UPDATE CASCADE ON DELETE CASCADE,
 	PRIMARY KEY (TenPhong, TenVatTu)
 );
