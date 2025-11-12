@@ -1,12 +1,12 @@
--- 25. Liệt kê học sinh đã hoàn tất toàn bộ các khoản đóng phí.
- SELECT hs.TenNamHoc, hs.TenLop, hs.MaHS, hs.HoDem, hs.TenRieng
- FROM HocSinh hs
- JOIN KhoanPhiTrongNam kp ON kp.TenNamHoc = hs.TenNamHoc
- LEFT JOIN (
-   SELECT TenNamHoc, TenLop, MaHS, TenKhoanPhi, SUM(SoTienDaDong) AS DaDong
-   FROM LanDongPhi
-   GROUP BY TenNamHoc, TenLop, MaHS, TenKhoanPhi
- ) d ON d.TenNamHoc = hs.TenNamHoc AND d.TenLop = hs.TenLop AND d.MaHS = hs.MaHS AND d.TenKhoanPhi = kp.TenKhoanPhi
- GROUP BY hs.TenNamHoc, hs.TenLop, hs.MaHS, hs.HoDem, hs.TenRieng
- HAVING COUNT(*) = SUM(CASE WHEN COALESCE(d.DaDong, 0) >= kp.SoTienPhaiDong THEN 1 ELSE 0 END)
- ORDER BY hs.TenNamHoc, hs.TenLop, hs.MaHS;
+-- Truy vấn thống kê tổng học sinh ăn bán trú theo từng ngày + từng giáo viên phụ trách
+SELECT 
+    tg.NgayAn,
+    gv.MaNS_G,
+    ns.HoTen AS TenGiaoVien,
+    COUNT(DISTINCT tg.MaHS) AS SoHocSinhThamGia,
+    GROUP_CONCAT(DISTINCT tg.TenLop ORDER BY tg.TenLop SEPARATOR ', ') AS CacLopThamGia
+FROM ThamGiaBanTru tg
+JOIN GiaoVien gv ON tg.MaNS_G = gv.MaNS_G
+JOIN NhanSu ns ON gv.MaNS_G = ns.MaNS
+GROUP BY tg.NgayAn, gv.MaNS_G, ns.HoTen
+ORDER BY tg.NgayAn DESC, SoHocSinhThamGia DESC;
