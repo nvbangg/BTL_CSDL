@@ -1,8 +1,10 @@
+
+
 INSERT INTO NamHoc (TenNamHoc, NgayBatDau, NgayKetThuc) VALUES
 ('2023-2024', '2023-09-05', '2024-05-31'),
 ('2024-2025', '2024-09-05', '2025-05-31');
 
-INSERT INTO ViTriMoTa (ViTriCongViec, MoTaCongViec) VALUES
+INSERT INTO ViTriCV_MoTaCV (ViTriCongViec, MoTaCongViec) VALUES
 ('Hiệu trưởng', 'Quản lý chung mọi hoạt động của nhà trường, chịu trách nhiệm cao nhất.'),
 ('Phó Hiệu trưởng', 'Hỗ trợ hiệu trưởng, phụ trách chuyên môn hoặc cơ sở vật chất.'),
 ('Giáo viên', 'Trực tiếp giảng dạy, chăm sóc và giáo dục trẻ tại các lớp học.'),
@@ -96,7 +98,7 @@ INSERT INTO NhanSu (MaNS, HoTen, NgaySinh, GioiTinh, DiaChi, Email, TrangThaiLam
 ('BV002', 'Phạm Hữu Năm', '1972-01-01', 'Nam', '88 Ông Ích Khiêm, Phường 5, Quận 11, TP.HCM', 'nam.ph@truongmamnon.edu.vn', 'Đang làm việc', '065172059595', '2019-10-30', NULL, NULL);
 
 
-INSERT INTO GiaoVien (MaNS, TrinhDoChuyenMon, PhongBan, ThamNienNghe) VALUES
+INSERT INTO GiaoVien (MaNS_G, TrinhDoChuyenMon, PhongBan, ThamNienNghe) VALUES
 ('GV001', 'Đại học Sư phạm Mầm non', 'Khối Lá', 6),
 ('GV002', 'Đại học Sư phạm Mầm non', 'Khối Lá', 4),
 ('GV003', 'Cao đẳng Sư phạm Mầm non', 'Khối Chồi', 7),
@@ -107,7 +109,7 @@ INSERT INTO GiaoVien (MaNS, TrinhDoChuyenMon, PhongBan, ThamNienNghe) VALUES
 ('GV008', 'Đại học Sư phạm Mầm non', 'Khối Nhà trẻ', 8);
 
 -- Dữ liệu cho bảng CanBoNhanVien
-INSERT INTO CanBoNhanVien (MaNS, ViTriCongViec) VALUES
+INSERT INTO CanBoNhanVien (MaNS_C, ViTriCongViec) VALUES
 -- Ban Giám Hiệu
 ('BGH01', 'Hiệu trưởng'),
 ('BGH02', 'Phó Hiệu trưởng'),
@@ -152,7 +154,7 @@ INSERT INTO NhanSuSDT (MaNS, SDT) VALUES
 -- SiSo ban đầu được đặt là 0
 
 -- ****** NĂM HỌC 2023-2024 ******
-INSERT INTO LopHoc (TenNamHoc, TenLop, MaNS, SiSo, PhongHocChinh) VALUES
+INSERT INTO LopHoc (TenNamHoc, TenLop, MaNS_G, SiSo, PhongHocChinh) VALUES
 -- Khối Nhà trẻ
 ('2023-2024', 'NT1', 'GV007', 0, 'NT01'),
 -- Khối Mầm
@@ -165,7 +167,7 @@ INSERT INTO LopHoc (TenNamHoc, TenLop, MaNS, SiSo, PhongHocChinh) VALUES
 ('2023-2024', 'LA2', 'GV002', 0, 'LA02');
 
 -- ****** NĂM HỌC 2024-2025 ******
-INSERT INTO LopHoc (TenNamHoc, TenLop, MaNS, SiSo, PhongHocChinh) VALUES
+INSERT INTO LopHoc (TenNamHoc, TenLop, MaNS_G, SiSo, PhongHocChinh) VALUES
 -- Khối Nhà trẻ
 ('2024-2025', 'NT1', 'GV007', 0, 'NT01'),
 -- Khối Mầm
