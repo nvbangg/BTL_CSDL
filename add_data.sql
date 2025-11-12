@@ -188,10 +188,6 @@ INSERT INTO KhoanPhiTrongNam (TenNamHoc, TenKhoanPhi, SoTienPhaiDong) VALUES
 ('2023-2024', 'Phí cơ sở vật chất', 1500000),
 ('2023-2024', 'Phí hoạt động ngoại khóa', 800000),
 ('2023-2024', 'Phí đồng phục', 500000);
-
--- ****** CÁC KHOẢN PHÍ CHO NĂM HỌC 2024-2025 ******
--- Ghi chú: Giả sử có sự điều chỉnh (tăng) học phí so với năm trước
-INSERT INTO KhoanPhiTrongNam (TenNamHoc, TenKhoanPhi, SoTienPhaiDong) VALUES
 ('2024-2025', 'Học phí', 2800000),
 ('2024-2025', 'Phí ăn bán trú', 1300000),
 ('2024-2025', 'Phí cơ sở vật chất', 1500000),
