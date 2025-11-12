@@ -42,7 +42,7 @@ INSERT INTO Phong (TenPhong, SucChua, ChucNang) VALUES
 -- Các phòng chức năng
 ('VP', 10, 'Văn phòng nhà trường'),
 ('BGH', 5, 'Phòng Ban Giám Hiệu'),
-('YT', 15, 'Phòng Y Tế'),
+('YT', 15, 'Phòng Y Tế'),   
 ('NB', 10, 'Nhà bếp và khu vực ăn uống'),
 ('VATLY', 40, 'Phòng giáo dục thể chất'),
 ('NHAC', 40, 'Phòng âm nhạc và nghệ thuật'),
@@ -348,3 +348,22 @@ INSERT INTO BangLuong (MaNS, NgayNhanLuong, LuongCoBan, Thuong, PhuCap, KhauTru)
 ('VS001', '2025-10-31', 7000000.00, 0.00, 500000.00, 787500.00),
 ('BV001', '2025-10-31', 8000000.00, 0.00, 500000.00, 892500.00),
 ('BV002', '2025-10-31', 8000000.00, 0.00, 500000.00, 892500.00);
+
+
+INSERT INTO QuanLy (MaNS_C, TenPhong) VALUES
+-- Ban Giám Hiệu quản lý phòng Ban Giám Hiệu
+('BGH01', 'BGH'),
+('BGH02', 'BGH'),
+-- Nhân viên văn phòng, Kế toán, Thủ quỹ quản lý Văn phòng
+('VP001', 'VP'),
+('KT001', 'VP'),
+('TQ001', 'VP'),
+-- Nhân viên y tế quản lý phòng Y Tế
+('YT001', 'YT'),
+-- Đầu bếp quản lý Nhà bếp
+('DB001', 'NB'),
+-- Nhân viên vệ sinh quản lý Kho
+('VS001', 'KH'),
+-- Bảo vệ quản lý phòng Bảo vệ
+('BV001', 'BV'),
+('BV002', 'BV');
