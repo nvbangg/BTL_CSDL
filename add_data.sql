@@ -84,9 +84,9 @@ INSERT INTO NhanSu (MaNS, HoTen, NgaySinh, GioiTinh, DiaChi, Email, TrangThaiLam
 ('GV006', 'Đặng Kim Oanh', '1993-06-12', 'Nữ', '404 Hoàng Văn Thụ, Phường 4, Quận Tân Bình, TP.HCM', 'oanh.dk@truongmamnon.edu.vn', 'Đang làm việc', '058193012121', '2019-01-15'),
 ('GV007', 'Trịnh Hoài Nam', '1997-03-08', 'Nam', '789 Cách Mạng Tháng Tám, Phường 15, Quận 10, TP.HCM', 'nam.th@truongmamnon.edu.vn', 'Đang làm việc', '079197045454', '2022-02-20'),
 ('GV008', 'Bùi Thị Bích', '1991-10-05', 'Nữ', '15 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận, TP.HCM', 'bich.bt@truongmamnon.edu.vn', 'Đã nghỉ việc', '060191067676', '2016-08-18'),
-('GV009', 'Lê Thị Hương', '1994-05-15', 'Nữ', '321 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận, TP.HCM', 'huong.lt@truongmamnon.edu.vn', 'Đang làm việc', '061194032145', '2023-08-10'),
-('GV010', 'Trần Thị Hương', '1993-07-22', 'Nữ', '555 Nguyễn Văn Cừ, Phường 4, Quận 5, TP.HCM', 'huong.tt@truongmamnon.edu.vn', 'Đang làm việc', '085193012345', '2024-01-15'),
-('GV011', 'Nguyễn Văn Huy', '1991-03-10', 'Nam', '777 Hoàng Văn Thụ, Quận Tân Bình, TP.HCM', 'huy.nv@truongmamnon.edu.vn', 'Đang làm việc', '077191045678', '2019-09-01'),
+    ('GV009', 'Lê Thị Hương', '1994-05-15', 'Nữ', '321 Lê Văn Sỹ, Phường 13, Quận Phú Nhuận, TP.HCM', 'huong.lt@truongmamnon.edu.vn', 'Đang làm việc', '061194032145', '2023-08-10'),
+    ('GV010', 'Trần Thị Hương', '1993-07-22', 'Nữ', '555 Nguyễn Văn Cừ, Phường 4, Quận 5, TP.HCM', 'huong.tt@truongmamnon.edu.vn', 'Đang làm việc', '085193012345', '2024-01-15'),
+    ('GV011', 'Nguyễn Văn Huy', '1991-03-10', 'Nam', '777 Hoàng Văn Thụ, Quận Tân Bình, TP.HCM', 'huy.nv@truongmamnon.edu.vn', 'Đang làm việc', '077191045678', '2019-09-01'),
 
 -- Nhân viên khác
 ('KT001', 'Phan Thanh Thảo', '1988-12-01', 'Nữ', '227 Nguyễn Văn Cừ, Phường 4, Quận 5, TP.HCM', 'thao.pt@truongmamnon.edu.vn', 'Đang làm việc', '082188089898', '2015-05-20'),
