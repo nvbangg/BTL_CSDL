@@ -1,3 +1,4 @@
+ -- 22. Tính tổng số tiền phải đóng của một học sinh trong một năm học.
  SELECT hs.TenNamHoc, hs.TenLop, hs.MaHS, SUM(kp.SoTienPhaiDong) AS TongTienPhaiDong
  FROM HocSinh hs
  JOIN KhoanPhiTrongNam kp ON kp.TenNamHoc = hs.TenNamHoc

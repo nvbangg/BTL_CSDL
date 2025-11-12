@@ -1,3 +1,5 @@
+ 
+-- 7. Tìm những nhân sự có cùng địa chỉ hoặc email chứa “gmail.com”.
  SELECT *
  FROM NhanSu
  WHERE Email LIKE '%gmail.com'
