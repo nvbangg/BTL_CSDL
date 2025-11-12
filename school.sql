@@ -85,7 +85,7 @@ CREATE TABLE LopHoc (
 );
 
 CREATE TABLE HocSinh (
-    MaHS VARCHAR(20),
+    MaHS INT,
     TenNamHoc VARCHAR(20),
     TenLop VARCHAR(10),
     HoDem VARCHAR(50),
@@ -108,7 +108,7 @@ CREATE TABLE LanDongPhi (
     TenKhoanPhi VARCHAR(100),
     TenNamHoc VARCHAR(20),
     TenLop VARCHAR(10),
-    MaHS VARCHAR(20),
+    MaHS INT,
     FOREIGN KEY (TenNamHoc, TenLop, MaHS) REFERENCES HocSinh(TenNamHoc, TenLop, MaHS) ON UPDATE CASCADE ON DELETE SET NULL,
     FOREIGN KEY (TenNamHoc, TenKhoanPhi) REFERENCES KhoanPhiTrongNam(TenNamHoc, TenKhoanPhi)
 );
@@ -127,7 +127,7 @@ CREATE TABLE LanAnMonAn (
 CREATE TABLE ThamGiaBanTru (
     TenNamHoc VARCHAR(20),
     TenLop VARCHAR(10),
-    MaHS VARCHAR(20),
+    MaHS INT,
     NgayAn DATE,
     MaNS_G VARCHAR(20),
     PRIMARY KEY (TenNamHoc, TenLop, MaHS, NgayAn),

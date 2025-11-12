@@ -322,3 +322,4 @@ UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc =
 UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc = '2024-2025' AND HocSinh.TenLop = 'MAM1') WHERE TenNamHoc = '2024-2025' AND TenLop = 'MAM1';
 UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc = '2024-2025' AND HocSinh.TenLop = 'MAM2') WHERE TenNamHoc = '2024-2025' AND TenLop = 'MAM2';
 UPDATE LopHoc SET SiSo = (SELECT COUNT(*) FROM HocSinh WHERE HocSinh.TenNamHoc = '2024-2025' AND HocSinh.TenLop = 'NT1') WHERE TenNamHoc = '2024-2025' AND TenLop = 'NT1';
+
