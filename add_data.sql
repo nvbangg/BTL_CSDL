@@ -164,10 +164,7 @@ INSERT INTO LopHoc (TenNamHoc, TenLop, MaNS_G, SiSo, PhongHocChinh) VALUES
 ('2023-2024', 'CHOI1', 'GV003', 0, 'CHOI01'),
 -- Khối Lá
 ('2023-2024', 'LA1', 'GV001', 0, 'LA01'),
-('2023-2024', 'LA2', 'GV002', 0, 'LA02');
-
--- ****** NĂM HỌC 2024-2025 ******
-INSERT INTO LopHoc (TenNamHoc, TenLop, MaNS_G, SiSo, PhongHocChinh) VALUES
+('2023-2024', 'LA2', 'GV002', 0, 'LA02'),
 -- Khối Nhà trẻ
 ('2024-2025', 'NT1', 'GV007', 0, 'NT01'),
 -- Khối Mầm
@@ -187,7 +184,7 @@ INSERT INTO KhoanPhiTrongNam (TenNamHoc, TenKhoanPhi, SoTienPhaiDong) VALUES
 ('2023-2024', 'Phí ăn bán trú', 1200000),
 ('2023-2024', 'Phí cơ sở vật chất', 1500000),
 ('2023-2024', 'Phí hoạt động ngoại khóa', 800000),
-('2023-2024', 'Phí đồng phục', 500000);
+('2023-2024', 'Phí đồng phục', 500000),
 ('2024-2025', 'Học phí', 2800000),
 ('2024-2025', 'Phí ăn bán trú', 1300000),
 ('2024-2025', 'Phí cơ sở vật chất', 1500000),
@@ -363,3 +360,63 @@ INSERT INTO QuanLy (MaNS_C, TenPhong) VALUES
 -- Bảo vệ quản lý phòng Bảo vệ
 ('BV001', 'BV'),
 ('BV002', 'BV');
+
+
+INSERT INTO CoSoVatChat (TenPhong, TenVatTu, SoLuong, NgayTrangBi, TinhTrang, GiaTri) VALUES
+-- P.Học NT01
+('NT01', 'Giường lưới ngủ trưa', 20, '2023-08-01', 'Tốt', 500000),
+('NT01', 'Bàn nhựa composite (bộ 4 ghế)', 4, '2023-08-01', 'Tốt', 1200000),
+('NT01', 'Tủ kệ đồ chơi bằng nhựa', 3, '2023-08-01', 'Tốt', 2000000),
+('NT01', 'Thảm xốp lót sàn (m2)', 50, '2023-08-01', 'Tốt', 80000),
+('NT01', 'Điều hòa không khí 12000 BTU', 1, '2023-08-01', 'Tốt', 8000000),
+-- P.Học MAM01
+('MAM01', 'Bàn học trẻ em (4 chỗ)', 6, '2023-08-01', 'Tốt', 800000),
+('MAM01', 'Ghế nhựa đúc', 25, '2023-08-01', 'Tốt', 150000),
+('MAM01', 'Tủ đựng đồ cá nhân (25 ngăn)', 1, '2023-08-01', 'Tốt', 3500000),
+('MAM01', 'Bảng từ trắng di động', 1, '2023-08-01', 'Tốt', 1800000),
+('MAM01', 'Điều hòa không khí 12000 BTU', 1, '2023-08-01', 'Tốt', 8000000),
+-- P.Học LA01
+('LA01', 'Bàn học 2 chỗ (gỗ)', 18, '2023-08-01', 'Tốt', 1000000),
+('LA01', 'Ghế gỗ tựa lưng', 35, '2023-08-01', 'Tốt', 250000),
+('LA01', 'Tủ đựng ba lô (35 ngăn)', 1, '2023-08-01', 'Tốt', 4500000),
+('LA01', 'Bảng tương tác thông minh', 1, '2024-07-01', 'Tốt', 40000000),
+('LA01', 'Kệ sách góc thư viện', 1, '2023-08-01', 'Tốt', 2000000),
+('LA01', 'Điều hòa không khí 18000 BTU', 2, '2023-08-01', 'Tốt', 12000000),
+-- P. Văn phòng (VP)
+('VP', 'Bàn làm việc 1m6', 4, '2023-08-01', 'Tốt', 2500000),
+('VP', 'Ghế xoay văn phòng', 4, '2023-08-01', 'Tốt', 1500000),
+('VP', 'Tủ tài liệu 2m', 2, '2023-08-01', 'Tốt', 3000000),
+('VP', 'Máy tính để bàn (Bộ)', 4, '2024-01-10', 'Tốt', 12000000),
+('VP', 'Máy in Laser đa năng', 1, '2023-08-01', 'Tốt', 5000000),
+-- P. Ban Giám Hiệu (BGH)
+('BGH', 'Bàn họp lớn 2m4', 1, '2023-08-01', 'Tốt', 8000000),
+('BGH', 'Ghế họp chân quỳ', 8, '2023-08-01', 'Tốt', 1000000),
+('BGH', 'Bộ sofa tiếp khách', 1, '2023-08-01', 'Tốt', 15000000),
+('BGH', 'Tủ sách giám đốc', 1, '2023-08-01', 'Tốt', 4000000),
+-- P. Y Tế (YT)
+('YT', 'Giường y tế', 2, '2023-08-01', 'Tốt', 4000000),
+('YT', 'Tủ thuốc inox', 1, '2023-08-01', 'Tốt', 3000000),
+('YT', 'Cân sức khỏe điện tử', 1, '2023-08-01', 'Tốt', 1500000),
+('YT', 'Bàn khám bệnh', 1, '2023-08-01', 'Tốt', 2000000),
+-- P. Nhà bếp (NB)
+('NB', 'Tủ lạnh công nghiệp 4 cánh', 1, '2023-08-01', 'Tốt', 35000000),
+('NB', 'Bếp gas công nghiệp 3 họng', 2, '2023-08-01', 'Tốt', 7000000),
+('NB', 'Nồi cơm điện công nghiệp 10L', 2, '2023-08-01', 'Tốt', 4000000),
+('NB', 'Chậu rửa inox 3 ngăn', 1, '2023-08-01', 'Tốt', 5000000),
+('NB', 'Máy xay thịt công nghiệp', 1, '2024-02-15', 'Tốt', 2500000),
+-- P. Thể chất (VATLY)
+('VATLY', 'Thảm thể dục (m2)', 100, '2023-08-01', 'Tốt', 80000),
+('VATLY', 'Bóng rổ trẻ em (quả)', 10, '2023-08-01', 'Tốt', 150000),
+('VATLY', 'Cầu trượt nhựa composite', 2, '2023-08-01', 'Tốt', 3000000),
+('VATLY', 'Xà đu đa năng', 1, '2023-08-01', 'Tốt', 5000000),
+-- P. Âm nhạc (NHAC)
+('NHAC', 'Đàn Organ Casio', 5, '2023-08-01', 'Tốt', 4000000),
+('NHAC', 'Trống bongo (bộ)', 10, '2023-08-01', 'Tốt', 500000),
+('NHAC', 'Loa và amply', 1, '2023-08-01', 'Tốt', 6000000),
+('NHAC', 'Gương ốp tường (m2)', 20, '2023-08-01', 'Tốt', 400000),
+-- P. Bảo vệ (BV)
+('BV', 'Màn hình theo dõi camera 32 inch', 1, '2023-08-01', 'Tốt', 7000000),
+('BV', 'Bộ đàm cầm tay', 4, '2023-08-01', 'Tốt', 1200000),
+('BV', 'Bàn gác bảo vệ', 1, '2023-08-01', 'Tốt', 1000000),
+-- P. Kho (KH)
+('KH', 'Kệ sắt V lỗ 5 tầng', 5, '2023-08-01', 'Tốt', 2000000);
