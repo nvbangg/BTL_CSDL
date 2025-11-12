@@ -1,3 +1,4 @@
+ -- 20. Liệt kê danh sách học sinh cùng giới tính trong cùng một lớp.
  SELECT hs.TenNamHoc, hs.TenLop, hs.GioiTinh, hs.MaHS, hs.HoDem, hs.TenRieng
  FROM HocSinh hs
  JOIN (

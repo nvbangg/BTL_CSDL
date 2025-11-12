@@ -1,3 +1,4 @@
+-- 25. Liệt kê học sinh đã hoàn tất toàn bộ các khoản đóng phí.
  SELECT hs.TenNamHoc, hs.TenLop, hs.MaHS, hs.HoDem, hs.TenRieng
  FROM HocSinh hs
  JOIN KhoanPhiTrongNam kp ON kp.TenNamHoc = hs.TenNamHoc

@@ -1,3 +1,4 @@
+-- 24. Tìm danh sách học sinh còn nợ học phí (ConNo > 0).
  SELECT hs.TenNamHoc, hs.TenLop, hs.MaHS, hs.HoDem, hs.TenRieng, SUM(ldp.ConNo) AS TongConNo
  FROM LanDongPhi ldp
  JOIN HocSinh hs ON hs.TenNamHoc = ldp.TenNamHoc AND hs.TenLop = ldp.TenLop AND hs.MaHS = ldp.MaHS
