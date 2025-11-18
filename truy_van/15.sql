@@ -1,5 +1,5 @@
  -- 15. Tìm các học sinh sinh trong tháng 9 (để tổ chức sinh nhật).
- SELECT *
+ SELECT hocsinh.MaHS, hocsinh.HoDem, hocsinh.TenRieng, hocsinh.NgaySinh
  FROM HocSinh, namhoc
  WHERE hocsinh.TenNamHoc = namhoc.TenNamHoc 
  and curdate() between namhoc.NgayBatDau and namhoc.NgayKetThuc
