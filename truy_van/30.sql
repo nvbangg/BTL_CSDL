@@ -1,4 +1,4 @@
--- Truy vấn tổng hợp lương nhân viên (bao gồm giáo viên và cán bộ)
+-- 30 Truy vấn tổng hợp lương nhân viên (bao gồm giáo viên và cán bộ)
 SELECT 
     ns.MaNS,
     ns.HoTen,
