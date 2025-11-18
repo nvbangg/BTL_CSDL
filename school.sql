@@ -90,7 +90,7 @@ CREATE TABLE HocSinh (
     DiaChi VARCHAR(255),
     HoTenPhuHuynh VARCHAR(100) NOT NULL,
     SDTPhuHuynh VARCHAR(15) NOT NULL,
-    TrangThaiHocTap VARCHAR(50) NOT NULL DEFAULT 'Đang học' CHECK (TrangThaiHocTap IN ('Đang học', 'Bảo lưu', 'Nghỉ học', 'Đã nghỉ học')),
+    TrangThaiHocTap VARCHAR(50) NOT NULL DEFAULT 'Đang học' CHECK (TrangThaiHocTap IN ('Đang học', 'Bảo lưu', 'Đã nghỉ học', 'Học xong')),
     PRIMARY KEY(TenNamHoc, TenLop, MaHS),
     FOREIGN KEY (TenNamHoc, TenLop) REFERENCES LopHoc(TenNamHoc, TenLop) ON UPDATE CASCADE ON DELETE CASCADE
 );
