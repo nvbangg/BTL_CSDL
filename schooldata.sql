@@ -447,7 +447,17 @@ INSERT INTO HocSinh (MaHS, TenNamHoc, TenLop, HoDem, TenRieng, NgaySinh, GioiTin
 (5, '2025-2026', 'LA3', 'Nghiêm Xuân', 'Tú', '2020-05-29', 'Nam', '121 Đường X, Q10, TP.HCM', 'Nghiêm Xuân Bố', '0955557005', 'Đang học'),
 (6, '2025-2026', 'LA3', 'Sơn Yến', 'Vy', '2020-06-30', 'Nữ', '122 Đường Y, Tân Bình, TP.HCM', 'Sơn Yến Mẹ', '0955557006', 'Đang học');
 
-
+UPDATE LopHoc AS LH
+INNER JOIN (
+    SELECT 
+        TenLop,
+        COUNT(MaHS) AS SiSoThucTe
+    FROM HocSinh
+    WHERE TenNamHoc = '2025-2026' AND TrangThaiHocTap = 'Đang học'
+    GROUP BY TenLop
+) AS HS_COUNT ON LH.TenLop = HS_COUNT.TenLop AND LH.TenNamHoc = '2025-2026'
+SET LH.SiSo = HS_COUNT.SiSoThucTe
+WHERE LH.TenNamHoc = '2025-2026';
 
 INSERT INTO LanDongPhi (MaGiaoDich, ThoiGianDong, SoTienDaDong, ConNo, TenKhoanPhi, TenNamHoc, TenLop, MaHS) VALUES
 -- Lớp NT1 (Nguyễn Văn An) - Đóng trọn gói 4 khoản
