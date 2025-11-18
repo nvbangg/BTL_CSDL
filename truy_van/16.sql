@@ -1,0 +1,1 @@
+-- 16. Tính tổng số tiền đã thu trong năm

@@ -1,4 +1,1 @@
--- 6. Tính tổng giá trị cơ sở vật chất các phòng nếu có
-SELECT TenPhong, SUM(GiaTri * SoLuong) AS TongGiaTri
-FROM CoSoVatChat
-GROUP BY TenPhong;
+-- 6. liệt kê các phòng kèm tên các người quản lý và tổng giá trị cơ sở vật chất
