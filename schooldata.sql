@@ -419,72 +419,110 @@ INSERT INTO HocSinh (MaHS, TenNamHoc, TenLop, HoDem, TenRieng, NgaySinh, GioiTin
 (6, '2025-2026', 'LA3', 'Sơn Yến', 'Vy', '2020-06-30', 'Nữ', '122 Đường Y, Tân Bình, TP.HCM', 'Sơn Yến Mẹ', '0955557006', 'Đang học');
 
 
+INSERT INTO KhoanPhiTrongNam (TenNamHoc, TenKhoanPhi, SoTienPhaiDong) VALUES
+('2022-2023', 'Học phí', 2200000),
+('2022-2023', 'Phí ăn bán trú', 1100000),
+('2022-2023', 'Phí cơ sở vật chất', 1500000),
+('2022-2023', 'Phí hoạt động ngoại khóa', 700000),
+('2022-2023', 'Phí đồng phục', 500000),
+('2023-2024', 'Học phí', 2500000),
+('2023-2024', 'Phí ăn bán trú', 1200000),
+('2023-2024', 'Phí cơ sở vật chất', 1500000),
+('2023-2024', 'Phí hoạt động ngoại khóa', 800000),
+('2023-2024', 'Phí đồng phục', 500000),
+('2024-2025', 'Học phí', 2800000),
+('2024-2025', 'Phí ăn bán trú', 1300000),
+('2024-2025', 'Phí cơ sở vật chất', 1500000),
+('2024-2025', 'Phí hoạt động ngoại khóa', 850000),
+('2024-2025', 'Phí đồng phục', 550000),
+('2025-2026', 'Học phí', 3000000),
+('2025-2026', 'Phí ăn bán trú', 1400000),
+('2025-2026', 'Phí cơ sở vật chất', 1500000),
+('2025-2026', 'Phí hoạt động ngoại khóa', 900000),
+('2025-2026', 'Phí đồng phục', 600000);
+
 INSERT INTO LanDongPhi (MaGiaoDich, ThoiGianDong, SoTienDaDong, ConNo, TenKhoanPhi, TenNamHoc, TenLop, MaHS) VALUES
 -- Lớp NT1 (Nguyễn Văn An) - Đóng trọn gói 4 khoản
 ('GD001', '2025-09-05', 3000000, 0, 'Học phí', '2025-2026', 'NT1', 1),
 ('GD002', '2025-09-05', 1400000, 0, 'Phí ăn bán trú', '2025-2026', 'NT1', 1),
 ('GD003', '2025-09-05', 1500000, 0, 'Phí cơ sở vật chất', '2025-2026', 'NT1', 1),
 ('GD004', '2025-09-05', 600000, 0, 'Phí đồng phục', '2025-2026', 'NT1', 1),
+
 -- Lớp NT1 (Trần Ngọc Bảo Châu) - Đóng 2 khoản
 ('GD005', '2025-09-07', 3000000, 0, 'Học phí', '2025-2026', 'NT1', 2),
 ('GD006', '2025-09-07', 1400000, 0, 'Phí ăn bán trú', '2025-2026', 'NT1', 2),
--- Lớp NT1 (Hoàng Gia Minh) - Đóng 1 phần học phí
+
+-- Lớp NT1 (Hoàng Gia Minh) - Đóng 1 phần học phí (Tổng 3tr: Đã đóng 1.5tr, Nợ 1.5tr)
 ('GD007', '2025-09-10', 1500000, 1500000, 'Học phí', '2025-2026', 'NT1', 3),
 
 -- Lớp MAM1 (Lê Hoàng Khánh) - Đóng Học phí làm 2 lần + Đồng phục
 ('GD008', '2025-09-10', 1700000, 1300000, 'Học phí', '2025-2026', 'MAM1', 1),
 ('GD009', '2025-10-10', 1300000, 0, 'Học phí', '2025-2026', 'MAM1', 1),
 ('GD010', '2025-09-10', 600000, 0, 'Phí đồng phục', '2025-2026', 'MAM1', 1),
+
 -- Lớp MAM1 (Phạm Gia Hân) - Đóng 3 khoản
 ('GD011', '2025-09-06', 3000000, 0, 'Học phí', '2025-2026', 'MAM1', 2),
 ('GD012', '2025-09-06', 1400000, 0, 'Phí ăn bán trú', '2025-2026', 'MAM1', 2),
 ('GD013', '2025-09-06', 1500000, 0, 'Phí cơ sở vật chất', '2025-2026', 'MAM1', 2),
+
 -- Lớp MAM1 (Đặng Minh Trí) - Đóng Học phí
 ('GD014', '2025-09-08', 3000000, 0, 'Học phí', '2025-2026', 'MAM1', 3),
 
 -- Lớp MAM2 (Vũ Nhật Anh) - Đóng Học phí + Bán trú
 ('GD015', '2025-09-05', 3000000, 0, 'Học phí', '2025-2026', 'MAM2', 1),
 ('GD016', '2025-09-05', 1400000, 0, 'Phí ăn bán trú', '2025-2026', 'MAM2', 1),
+
 -- Lớp MAM2 (Hoàng Yến Linh) - Đóng Học phí
 ('GD017', '2025-09-09', 3000000, 0, 'Học phí', '2025-2026', 'MAM2', 2),
--- Lớp MAM2 (Đỗ Phương Vy) - Đóng Phí CSVT 2 lần
+
+-- Lớp MAM2 (Đỗ Phương Vy) - Đóng Phí CSVT 2 lần (Tổng 1.5tr)
 ('GD018', '2025-09-12', 1000000, 500000, 'Phí cơ sở vật chất', '2025-2026', 'MAM2', 3),
 ('GD019', '2025-10-12', 500000, 0, 'Phí cơ sở vật chất', '2025-2026', 'MAM2', 3),
 
 -- Lớp CHOI1 (Mai Thanh Phong) - Đóng Học phí
 ('GD020', '2025-09-05', 3000000, 0, 'Học phí', '2025-2026', 'CHOI1', 1),
+
 -- Lớp CHOI1 (Lý Ánh Nguyệt) - Đóng Học phí + Phí ngoại khóa
 ('GD021', '2025-09-06', 3000000, 0, 'Học phí', '2025-2026', 'CHOI1', 2),
 ('GD022', '2025-09-06', 900000, 0, 'Phí hoạt động ngoại khóa', '2025-2026', 'CHOI1', 2),
+
 -- Lớp CHOI1 (Phan Gia Hân) - Đóng Phí CSVT + Đồng phục
 ('GD023', '2025-09-01', 1500000, 0, 'Phí cơ sở vật chất', '2025-2026', 'CHOI1', 3),
 ('GD024', '2025-09-01', 600000, 0, 'Phí đồng phục', '2025-2026', 'CHOI1', 3),
--- Lớp CHOI1 (Trần Minh Quân) - Đóng 1 phần Bán trú
+
+-- Lớp CHOI1 (Trần Minh Quân) - Đóng 1 phần Bán trú (Tổng 1.4tr: Đã đóng 800k, Nợ 600k)
 ('GD025', '2025-09-15', 800000, 600000, 'Phí ăn bán trú', '2025-2026', 'CHOI1', 4),
 
--- Lớp LA1 (Võ Nguyễn Tú Uyên) - Đóng 2 khoản, 1 khoản còn nợ
+-- Lớp LA1 (Võ Nguyễn Tú Uyên) - Đóng 2 khoản, 1 khoản còn nợ (Ngoại khóa 900k: Đóng 500k, Nợ 400k)
 ('GD026', '2025-09-02', 3000000, 0, 'Học phí', '2025-2026', 'LA1', 1),
 ('GD027', '2025-09-02', 1400000, 0, 'Phí ăn bán trú', '2025-2026', 'LA1', 1),
 ('GD028', '2025-09-15', 500000, 400000, 'Phí hoạt động ngoại khóa', '2025-2026', 'LA1', 1),
+
 -- Lớp LA1 (Bùi Gia Bảo) - Đóng Học phí
 ('GD029', '2025-09-04', 3000000, 0, 'Học phí', '2025-2026', 'LA1', 2),
+
 -- Lớp LA1 (Ngô Khánh An) - Đóng Học phí + CSVT
 ('GD030', '2025-09-05', 3000000, 0, 'Học phí', '2025-2026', 'LA1', 3),
 ('GD031', '2025-09-05', 1500000, 0, 'Phí cơ sở vật chất', '2025-2026', 'LA1', 3),
+
 -- Lớp LA1 (Hoàng Công Sơn) - Đóng Phí ngoại khóa
 ('GD032', '2025-09-10', 900000, 0, 'Phí hoạt động ngoại khóa', '2025-2026', 'LA1', 4),
 
 -- Lớp LA2 (Trần Hữu Quân) - Đóng Học phí
 ('GD033', '2025-09-03', 3000000, 0, 'Học phí', '2025-2026', 'LA2', 1),
+
 -- Lớp LA2 (Phạm Thùy Dung) - Đóng Học phí + Bán trú
 ('GD034', '2025-09-04', 3000000, 0, 'Học phí', '2025-2026', 'LA2', 2),
 ('GD035', '2025-09-04', 1400000, 0, 'Phí ăn bán trú', '2025-2026', 'LA2', 2),
+
 -- Lớp LA2 (Mai Anh Đào) - Đóng Học phí
 ('GD036', '2025-09-08', 3000000, 0, 'Học phí', '2025-2026', 'LA2', 3),
--- Lớp LA2 (Bùi Văn Nam) - Học sinh 'Đã nghỉ học' - đã đóng đợt đầu
-('GD037', '2025-09-06', 30000000, 0, 'Học phí', '2025-2026', 'LA2', 4),
+
+-- Lớp LA2 (Bùi Văn Nam) - Đã sửa lỗi thừa số 0 (30 triệu -> 3 triệu)
+('GD037', '2025-09-06', 3000000, 0, 'Học phí', '2025-2026', 'LA2', 4),
 ('GD038', '2025-09-06', 1500000, 0, 'Phí cơ sở vật chất', '2025-2026', 'LA2', 4),
--- Lớp LA2 (Hoàng Minh Long) - Đóng 1 phần Học phí và 1 phần CSVT
+
+-- Lớp LA2 (Hoàng Minh Long) - Đóng 1 phần Học phí (3tr) và 1 phần CSVT (1.5tr)
 ('GD039', '2025-09-11', 2200000, 800000, 'Học phí', '2025-2026', 'LA2', 5),
 ('GD040', '2025-09-11', 1000000, 500000, 'Phí cơ sở vật chất', '2025-2026', 'LA2', 5);
 
