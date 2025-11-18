@@ -1,5 +1,4 @@
--- 9. Liệt kê tất cả các lớp học trong năm học 2024–2025.
- SELECT TenNamHoc, TenLop, MaNS_G, SiSo, PhongHocChinh
- FROM LopHoc
- WHERE TenNamHoc = '2024-2025'
- ORDER BY TenLop;
+-- 13. Hiển thị danh sách các năm học và thời gian bắt đầu – kết thúc.
+ SELECT TenNamHoc, NgayBatDau, NgayKetThuc
+ FROM NamHoc
+ ORDER BY NgayBatDau;

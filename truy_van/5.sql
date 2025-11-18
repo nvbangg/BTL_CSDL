@@ -1,7 +1,5 @@
- 
--- 5. Hiển thị danh sách giáo viên có thâm niên nghề từ 5 năm trở lên.
- SELECT ns.MaNS, ns.HoTen, gv.TrinhDoChuyenMon, gv.PhongBan, gv.ThamNienNghe
- FROM GiaoVien gv
- JOIN NhanSu ns ON ns.MaNS = gv.MaNS_G
- WHERE gv.ThamNienNghe >= 5
- ORDER BY gv.ThamNienNghe DESC, ns.HoTen;
+ -- 6. Liệt kê danh sách nhân sự vào làm trong năm 2018.
+ SELECT MaNS, HoTen, NgayVaoLam, TrangThaiLamViec
+ FROM NhanSu
+ WHERE YEAR(NgayVaoLam) = 2018
+ ORDER BY NgayVaoLam, HoTen;

@@ -1,5 +1,6 @@
- -- 6. Liệt kê danh sách nhân sự vào làm trong năm 2018.
- SELECT MaNS, HoTen, NgayVaoLam, TrangThaiLamViec
- FROM NhanSu
- WHERE YEAR(NgayVaoLam) = 2018
- ORDER BY NgayVaoLam, HoTen;
+-- 7. Tính tổng giá trị cơ sở vật chất của từng phòng (tổng GiaTri theo TenPhong).
+ SELECT p.TenPhong, COALESCE(SUM(csvc.GiaTri * csvc.SoLuong), 0) AS TongGiaTriCoSoVatChat
+ FROM Phong p
+ LEFT JOIN CoSoVatChat csvc ON csvc.TenPhong = p.TenPhong
+ GROUP BY p.TenPhong
+ ORDER BY p.TenPhong;

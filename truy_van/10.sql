@@ -1,6 +1,5 @@
--- 10. Tính tổng sĩ số học sinh của mỗi lớp.
- SELECT TenNamHoc, TenLop, COUNT(*) AS TongSiSo
- FROM HocSinh
- WHERE TrangThaiHocTap = 'Đang học'
- GROUP BY TenNamHoc, TenLop
- ORDER BY TenNamHoc, TenLop;
+-- 14. Tìm những năm học đã kết thúc (so sánh với ngày hiện tại).
+ SELECT TenNamHoc, NgayKetThuc
+ FROM NamHoc
+ WHERE NgayKetThuc < CURDATE()
+ ORDER BY NgayKetThuc;

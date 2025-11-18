@@ -1,4 +1,5 @@
--- 13. Hiển thị danh sách các năm học và thời gian bắt đầu – kết thúc.
- SELECT TenNamHoc, NgayBatDau, NgayKetThuc
- FROM NamHoc
- ORDER BY NgayBatDau;
+-- 18. Liệt kê những học sinh có trạng thái học tập là “Bảo lưu” hoặc “Nghỉ học”.
+SELECT TenNamHoc, TenLop, MaHS, HoDem, TenRieng, TrangThaiHocTap
+FROM HocSinh
+WHERE TrangThaiHocTap IN ('Bảo lưu', 'Nghỉ học', 'Đã nghỉ học')
+ORDER BY TenNamHoc, TenLop, MaHS;

@@ -1,4 +1,5 @@
- -- 15. Liệt kê danh sách học sinh theo lớp và năm học.
- SELECT TenNamHoc, TenLop, MaHS, HoDem, TenRieng, NgaySinh, GioiTinh, TrangThaiHocTap
+ -- 19. Tìm các học sinh sinh trong tháng 9 (để tổ chức sinh nhật).
+ SELECT TenNamHoc, TenLop, MaHS, HoDem, TenRieng, NgaySinh, GioiTinh
  FROM HocSinh
- ORDER BY TenNamHoc, TenLop, MaHS;
+ WHERE MONTH(NgaySinh) = 9
+ ORDER BY TenNamHoc, TenLop, NgaySinh, MaHS;

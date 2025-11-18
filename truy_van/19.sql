@@ -1,5 +1,5 @@
- -- 19. Tìm các học sinh sinh trong tháng 9 (để tổ chức sinh nhật).
- SELECT TenNamHoc, TenLop, MaHS, HoDem, TenRieng, NgaySinh, GioiTinh
- FROM HocSinh
- WHERE MONTH(NgaySinh) = 9
- ORDER BY TenNamHoc, TenLop, NgaySinh, MaHS;
+-- 28. Liệt kê các món ăn đã được phục vụ trong ngày 2024-11-06.
+ SELECT MonAn
+ FROM LanAnMonAn
+ WHERE NgayAn = '2024-11-06'
+ ORDER BY MonAn;

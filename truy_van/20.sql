@@ -1,10 +1,23 @@
- -- 20. Liệt kê danh sách học sinh cùng giới tính trong cùng một lớp.
- SELECT hs.TenNamHoc, hs.TenLop, hs.GioiTinh, hs.MaHS, hs.HoDem, hs.TenRieng
- FROM HocSinh hs
- JOIN (
-   SELECT TenNamHoc, TenLop, GioiTinh
-   FROM HocSinh
-   GROUP BY TenNamHoc, TenLop, GioiTinh
-   HAVING COUNT(*) > 1
- ) g ON g.TenNamHoc = hs.TenNamHoc AND g.TenLop = hs.TenLop AND g.GioiTinh = hs.GioiTinh
- ORDER BY hs.TenNamHoc, hs.TenLop, hs.GioiTinh, hs.MaHS;
+-- Truy vấn tổng hợp toàn bộ thông tin học sinh + lớp + giáo viên + nợ học phí
+
+SELECT 
+    hs.MaHS,
+    CONCAT(hs.HoDem, ' ', hs.TenRieng) AS HoTenHocSinh,
+    hs.TenLop,
+    hs.TenNamHoc,
+    gv.MaNS_G AS MaGVCN,
+    ns.HoTen AS TenGVCN,
+    IFNULL(SUM(ldp.ConNo), 0) AS TongNoHocPhi
+FROM HocSinh hs
+JOIN LopHoc lh 
+    ON hs.TenNamHoc = lh.TenNamHoc 
+    AND hs.TenLop = lh.TenLop
+JOIN GiaoVien gv 
+    ON lh.MaNS_G = gv.MaNS_G
+JOIN NhanSu ns 
+    ON gv.MaNS_G = ns.MaNS
+LEFT JOIN LanDongPhi ldp 
+    ON hs.MaHS = ldp.MaHS 
+    AND hs.TenNamHoc = ldp.TenNamHoc
+GROUP BY hs.MaHS, hs.TenLop, hs.TenNamHoc, ns.HoTen
+ORDER BY TongNoHocPhi DESC;

@@ -1,7 +1,9 @@
- -- 12. Tìm lớp học có sĩ số lớn hơn 15 học sinh.
- SELECT hs.TenNamHoc, hs.TenLop, COUNT(*) AS SiSo
+-- 17. Tính tổng số học sinh đang theo học trong năm hiện tại.
+ SELECT COUNT(*) AS TongSoHocSinhDangTheoHoc
  FROM HocSinh hs
  WHERE hs.TrangThaiHocTap = 'Đang học'
- GROUP BY hs.TenNamHoc, hs.TenLop
- HAVING COUNT(*) > 15
- ORDER BY hs.TenNamHoc, hs.TenLop;
+   AND hs.TenNamHoc IN (
+       SELECT TenNamHoc
+       FROM NamHoc
+       WHERE CURDATE() BETWEEN NgayBatDau AND NgayKetThuc
+   );

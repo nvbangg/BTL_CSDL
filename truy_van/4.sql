@@ -1,7 +1,7 @@
  
--- 4. Liệt kê danh sách nhân sự theo vị trí công việc (CanBoNhanVien + ViTriCV_MoTaCV).
- SELECT cb.MaNS_C, ns.HoTen, cb.ViTriCongViec, vt.MoTaCongViec
- FROM CanBoNhanVien cb
- JOIN NhanSu ns ON ns.MaNS = cb.MaNS_C
- JOIN ViTriCV_MoTaCV vt ON vt.ViTriCongViec = cb.ViTriCongViec
- ORDER BY cb.ViTriCongViec, ns.HoTen;
+-- 5. Hiển thị danh sách giáo viên có thâm niên nghề từ 5 năm trở lên.
+ SELECT ns.MaNS, ns.HoTen, gv.TrinhDoChuyenMon, gv.PhongBan, gv.ThamNienNghe
+ FROM GiaoVien gv
+ JOIN NhanSu ns ON ns.MaNS = gv.MaNS_G
+ WHERE gv.ThamNienNghe >= 5
+ ORDER BY gv.ThamNienNghe DESC, ns.HoTen;

@@ -1,5 +1,7 @@
- -- 3. Đếm số lượng giáo viên theo từng phòng ban.
- SELECT PhongBan, COUNT(*) AS SoLuongGiaoVien
- FROM GiaoVien
- GROUP BY PhongBan
- ORDER BY PhongBan;
+ 
+-- 4. Liệt kê danh sách nhân sự theo vị trí công việc (CanBoNhanVien + ViTriCV_MoTaCV).
+ SELECT cb.MaNS_C, ns.HoTen, cb.ViTriCongViec, vt.MoTaCongViec
+ FROM CanBoNhanVien cb
+ JOIN NhanSu ns ON ns.MaNS = cb.MaNS_C
+ JOIN ViTriCV_MoTaCV vt ON vt.ViTriCongViec = cb.ViTriCongViec
+ ORDER BY cb.ViTriCongViec, ns.HoTen;

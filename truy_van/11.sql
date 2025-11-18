@@ -1,6 +1,5 @@
- -- 11. Liệt kê giáo viên chủ nhiệm của từng lớp.
-
- SELECT l.TenNamHoc, l.TenLop, l.MaNS_G, ns.HoTen AS GVCN
- FROM LopHoc l
- LEFT JOIN NhanSu ns ON ns.MaNS = l.MaNS_G
- ORDER BY l.TenNamHoc, l.TenLop;
+ -- 16. Tìm học sinh theo họ tên phụ huynh.
+ SELECT TenNamHoc, TenLop, MaHS, HoDem, TenRieng, HoTenPhuHuynh, SDTPhuHuynh
+ FROM HocSinh
+ WHERE HoTenPhuHuynh LIKE '%Mai Anh Thư%'
+ ORDER BY TenNamHoc, TenLop, MaHS;
