@@ -488,6 +488,8 @@ INSERT INTO LanDongPhi (MaGiaoDich, ThoiGianDong, SoTienDaDong, ConNo, TenKhoanP
 ('GD039', '2025-09-11', 2200000, 800000, 'Học phí', '2025-2026', 'LA2', 5),
 ('GD040', '2025-09-11', 1000000, 500000, 'Phí cơ sở vật chất', '2025-2026', 'LA2', 5);
 
+
+
 INSERT INTO LanAn (NgayAn) VALUES
 ('2025-10-21'),
 ('2025-10-22'),
