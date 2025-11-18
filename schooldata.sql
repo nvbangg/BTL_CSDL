@@ -419,27 +419,6 @@ INSERT INTO HocSinh (MaHS, TenNamHoc, TenLop, HoDem, TenRieng, NgaySinh, GioiTin
 (6, '2025-2026', 'LA3', 'Sơn Yến', 'Vy', '2020-06-30', 'Nữ', '122 Đường Y, Tân Bình, TP.HCM', 'Sơn Yến Mẹ', '0955557006', 'Đang học');
 
 
-INSERT INTO KhoanPhiTrongNam (TenNamHoc, TenKhoanPhi, SoTienPhaiDong) VALUES
-('2022-2023', 'Học phí', 2200000),
-('2022-2023', 'Phí ăn bán trú', 1100000),
-('2022-2023', 'Phí cơ sở vật chất', 1500000),
-('2022-2023', 'Phí hoạt động ngoại khóa', 700000),
-('2022-2023', 'Phí đồng phục', 500000),
-('2023-2024', 'Học phí', 2500000),
-('2023-2024', 'Phí ăn bán trú', 1200000),
-('2023-2024', 'Phí cơ sở vật chất', 1500000),
-('2023-2024', 'Phí hoạt động ngoại khóa', 800000),
-('2023-2024', 'Phí đồng phục', 500000),
-('2024-2025', 'Học phí', 2800000),
-('2024-2025', 'Phí ăn bán trú', 1300000),
-('2024-2025', 'Phí cơ sở vật chất', 1500000),
-('2024-2025', 'Phí hoạt động ngoại khóa', 850000),
-('2024-2025', 'Phí đồng phục', 550000),
-('2025-2026', 'Học phí', 3000000),
-('2025-2026', 'Phí ăn bán trú', 1400000),
-('2025-2026', 'Phí cơ sở vật chất', 1500000),
-('2025-2026', 'Phí hoạt động ngoại khóa', 900000),
-('2025-2026', 'Phí đồng phục', 600000);
 
 INSERT INTO LanDongPhi (MaGiaoDich, ThoiGianDong, SoTienDaDong, ConNo, TenKhoanPhi, TenNamHoc, TenLop, MaHS) VALUES
 -- Lớp NT1 (Nguyễn Văn An) - Đóng trọn gói 4 khoản
@@ -625,6 +604,7 @@ INSERT INTO LanAnMonAn (NgayAn, MonAn) VALUES
 ('2025-11-08', 'Canh khoai mỡ'),
 ('2025-11-08', 'Tráng miệng: Chè long nhãn'),
 ('2025-11-08', 'Bữa xế: Sữa bắp');
+
 
 INSERT INTO ThamGiaBanTru (TenNamHoc, TenLop, MaHS, NgayAn, MaNS_G) VALUES
 -- Ngày 2025-10-21 (Tất cả học sinh 'Đang học')
