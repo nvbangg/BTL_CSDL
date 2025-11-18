@@ -1,4 +1,4 @@
--- Truy vấn tổng hợp toàn bộ thông tin học sinh + lớp + giáo viên + nợ học phí
+-- 20. Truy vấn tổng hợp toàn bộ thông tin học sinh + lớp + giáo viên + nợ học phí
 
 SELECT 
     hs.MaHS,

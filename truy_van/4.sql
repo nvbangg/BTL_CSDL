@@ -1,5 +1,5 @@
  
--- 5. Hiển thị danh sách giáo viên có thâm niên nghề từ 5 năm trở lên.
+-- 4. Hiển thị danh sách giáo viên có thâm niên nghề từ 5 năm trở lên.
  SELECT ns.MaNS, ns.HoTen, gv.TrinhDoChuyenMon, gv.PhongBan, gv.ThamNienNghe
  FROM GiaoVien gv
  JOIN NhanSu ns ON ns.MaNS = gv.MaNS_G

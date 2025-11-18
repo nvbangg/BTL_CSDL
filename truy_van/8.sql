@@ -1,4 +1,4 @@
--- 10. Tính tổng sĩ số học sinh của mỗi lớp.
+-- 8. Tính tổng sĩ số học sinh của mỗi lớp.
  SELECT TenNamHoc, TenLop, COUNT(*) AS TongSiSo
  FROM HocSinh
  WHERE TrangThaiHocTap = 'Đang học'

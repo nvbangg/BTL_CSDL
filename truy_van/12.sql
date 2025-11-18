@@ -1,4 +1,4 @@
--- 17. Tính tổng số học sinh đang theo học trong năm hiện tại.
+-- 12. Tính tổng số học sinh đang theo học trong năm hiện tại.
  SELECT COUNT(*) AS TongSoHocSinhDangTheoHoc
  FROM HocSinh hs
  WHERE hs.TrangThaiHocTap = 'Đang học'

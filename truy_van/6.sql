@@ -1,4 +1,4 @@
--- 7. Tính tổng giá trị cơ sở vật chất của từng phòng (tổng GiaTri theo TenPhong).
+-- 6. Tính tổng giá trị cơ sở vật chất của từng phòng (tổng GiaTri theo TenPhong).
  SELECT p.TenPhong, COALESCE(SUM(csvc.GiaTri * csvc.SoLuong), 0) AS TongGiaTriCoSoVatChat
  FROM Phong p
  LEFT JOIN CoSoVatChat csvc ON csvc.TenPhong = p.TenPhong

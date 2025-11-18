@@ -1,4 +1,4 @@
--- Truy vấn thống kê tổng học sinh ăn bán trú theo từng ngày + từng giáo viên phụ trách
+-- 17. Truy vấn thống kê tổng học sinh ăn bán trú theo từng ngày + từng giáo viên phụ trách
 SELECT 
     tg.NgayAn,
     gv.MaNS_G,
