@@ -1,5 +1,5 @@
  -- 11. Tìm học sinh theo họ tên phụ huynh.
- SELECT TenNamHoc, TenLop, MaHS, HoDem, TenRieng, HoTenPhuHuynh, SDTPhuHuynh
+ SELECT *
  FROM HocSinh
- WHERE HoTenPhuHuynh LIKE '%Mai Anh Thư%'
+ WHERE HoTenPhuHuynh LIKE '%Tuấn'
  ORDER BY TenNamHoc, TenLop, MaHS;

@@ -1,5 +1,6 @@
  -- 15. Tìm các học sinh sinh trong tháng 9 (để tổ chức sinh nhật).
- SELECT TenNamHoc, TenLop, MaHS, HoDem, TenRieng, NgaySinh, GioiTinh
- FROM HocSinh
- WHERE MONTH(NgaySinh) = 9
- ORDER BY TenNamHoc, TenLop, NgaySinh, MaHS;
+ SELECT *
+ FROM HocSinh, namhoc
+ WHERE hocsinh.TenNamHoc = namhoc.TenNamHoc 
+ and curdate() between namhoc.NgayBatDau and namhoc.NgayKetThuc
+ and MONTH(NgaySinh) = 9;

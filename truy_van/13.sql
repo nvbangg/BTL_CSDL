@@ -1,5 +1,5 @@
 -- 13. Liệt kê những học sinh có trạng thái học tập là “Bảo lưu” hoặc “Đã nghỉ học”.
-SELECT TenNamHoc, TenLop, MaHS, HoDem, TenRieng, TrangThaiHocTap
+SELECT *
 FROM HocSinh
-WHERE TrangThaiHocTap IN ('Bảo lưu', 'Đã nghỉ học')
+WHERE TrangThaiHocTap IN ('Bảo lưu', 'Học xong')
 ORDER BY TenNamHoc, TenLop, MaHS;
