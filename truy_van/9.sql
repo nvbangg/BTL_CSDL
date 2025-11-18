@@ -1,4 +1,4 @@
--- 8. Liệt kê lương các nhân sự trong tháng hiện tại
+-- 9. Liệt kê 5 nhân sự lương cao nhất hiện tại
 SELECT 
     ns.MaNS,
     ns.HoTen,
