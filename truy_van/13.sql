@@ -2,4 +2,6 @@
 SELECT *
 FROM HocSinh
 WHERE TrangThaiHocTap IN ('Bảo lưu', 'Học xong')
-ORDER BY TenNamHoc, TenLop, MaHS;
+ORDER BY TenNamHoc,
+    TenLop,
+    MaHS;
