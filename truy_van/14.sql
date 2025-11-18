@@ -1,0 +1,1 @@
+-- 14. Liệt kê thông tin của một lớp cụ thể 
