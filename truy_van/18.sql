@@ -4,5 +4,5 @@
  JOIN HocSinh hs ON hs.TenNamHoc = t.TenNamHoc 
 	AND hs.TenLop = t.TenLop 
     AND hs.MaHS = t.MaHS
- WHERE t.NgayAn = '2024-10-21'
+ WHERE t.NgayAn = '2025-10-21'
  ORDER BY hs.TenNamHoc, hs.TenLop, hs.MaHS;
