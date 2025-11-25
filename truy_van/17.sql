@@ -1,13 +1,5 @@
--- 17. Truy vấn thống kê tổng học sinh ăn bán trú theo từng ngày + từng giáo viên phụ trách
-SELECT tg.NgayAn,
-    ns.HoTen AS TenGiaoVien,
-    tg.TenLop,
-    COUNT(tg.MaHS) AS SoHocSinhThamGia
-FROM ThamGiaBanTru tg
-    JOIN NhanSu ns ON ns.MaNS = tg.MaNS_G
-GROUP BY tg.NgayAn,
-    tg.MaNS_G,
-    ns.HoTen,
-    tg.TenLop
-ORDER BY tg.NgayAn DESC,
-    SoHocSinhThamGia DESC;
+-- 17. Liệt kê các món ăn đã được phục vụ trong ngày 2025-11-06.
+SELECT MonAn
+FROM LanAnMonAn
+WHERE NgayAn = '2025-11-06'
+ORDER BY MonAn;
